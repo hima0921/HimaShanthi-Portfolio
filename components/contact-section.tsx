@@ -21,6 +21,7 @@ export function ContactSection() {
               </p>
               {item.href ? (
                 
+                  <a
                   href={item.href}
                   target={item.external ? "_blank" : undefined}
                   rel={item.external ? "noopener noreferrer" : undefined}
@@ -38,6 +39,7 @@ export function ContactSection() {
           <p className="font-bold uppercase text-sm mb-4">Download CV</p>
           <div className="flex flex-wrap gap-4 justify-center">
             
+              <a
               href="/HimaShanthi-Portfolio/CV_Academia.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -46,6 +48,7 @@ export function ContactSection() {
               Research / Academia CV
             </a>
             
+              <a
               href="/HimaShanthi-Portfolio/CV_Industry.pdf"
               target="_blank"
               rel="noopener noreferrer"
