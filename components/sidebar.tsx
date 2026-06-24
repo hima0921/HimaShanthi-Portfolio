@@ -83,6 +83,7 @@ export function Sidebar() {
             CV
           </a>
           
+            <a
             href="https://github.com/hima0921"
             target="_blank"
             rel="noopener noreferrer"
