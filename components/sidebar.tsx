@@ -74,8 +74,15 @@ export function Sidebar() {
         </nav>
 
         {/* Right side: socials + contact (desktop) */}
-        <div className="hidden lg:flex items-center gap-3">
-          <a
+         <div className="hidden lg:flex items-center gap-3">
+          
+            <a
+              href="#contact"
+            className="border-2 border-black dark:border-white text-black dark:text-white font-bold py-2 px-4 text-xs uppercase rounded-md hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+          >
+            CV
+          </a>
+          
             href="https://github.com/hima0921"
             target="_blank"
             rel="noopener noreferrer"
