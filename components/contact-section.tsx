@@ -5,11 +5,13 @@ export function ContactSection() {
     { label: "LinkedIn", value: "LinkedIn Profile", href: "https://www.linkedin.com/in/himarayapati", external: true },
     { label: "Location", value: "Tempe, Arizona" },
   ]
+
   return (
     <section id="contact" className="py-20 bg-white dark:bg-gray-950 border-t-2 border-black dark:border-gray-700">
       <div className="w-full max-w-6xl xl:max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16">
         <h2 className="text-4xl md:text-5xl font-black mb-2 tracking-tight text-black dark:text-white">CONTACT</h2>
         <div className="h-1 w-32 bg-yellow-400 mb-12"></div>
+
         <div className="grid md:grid-cols-2 gap-6">
           {items.map((item, i) => (
             <div
@@ -35,15 +37,16 @@ export function ContactSection() {
             </div>
           ))}
         </div>
-        <div className="bg-yellow-400 p-8 text-center mt-12 rounded-2xl border-2 border-black">
-          <p className="font-bold uppercase text-sm mb-4">Download CV</p>
+
+        <div className="border-2 border-black dark:border-gray-600 bg-white dark:bg-gray-900 p-8 text-center mt-12 rounded-2xl">
+          <p className="font-bold uppercase text-sm mb-4 text-black dark:text-white">Download CV</p>
           <div className="flex flex-wrap gap-4 justify-center">
             
               <a
-              href="/HimaShanthi-Portfolio/CV_Academia.pdf"
+              href="/HimaShanthi-Portfolio/CV_AI_and_Research.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-black text-white font-bold px-6 py-3 uppercase text-sm hover:bg-gray-800 transition-colors"
+              className="inline-block bg-black dark:bg-white text-white dark:text-black font-bold px-6 py-3 uppercase text-sm hover:bg-yellow-400 hover:text-black transition-colors rounded-md"
             >
               Research / Academia CV
             </a>
@@ -52,7 +55,7 @@ export function ContactSection() {
               href="/HimaShanthi-Portfolio/CV_Industry.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-black text-white font-bold px-6 py-3 uppercase text-sm hover:bg-gray-800 transition-colors"
+              className="inline-block bg-black dark:bg-white text-white dark:text-black font-bold px-6 py-3 uppercase text-sm hover:bg-yellow-400 hover:text-black transition-colors rounded-md"
             >
               Industry / Data Science CV
             </a>
