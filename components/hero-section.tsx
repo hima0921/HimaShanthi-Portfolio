@@ -8,7 +8,7 @@ export function HeroSection() {
           {/* Left Content */}
           <div className="space-y-8">
             <div>
-              <h1 className="text-5xl md:text-6xl font-black mb-4 tracking-tight text-black dark:text-white">HIMA SHANTHI</h1>
+              <h1 className="text-5xl md:text-6xl font-black mb-4 tracking-tight text-black dark:text-white">HIMA SHANTHI RAYAPATI</h1>
               <div className="h-1.5 w-32 bg-yellow-400 mb-6"></div>
               <p className="text-lg font-semibold">Cognitive Science · Statistics · Human-AI Interaction</p>
             </div>
