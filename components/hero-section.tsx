@@ -2,7 +2,7 @@ export function HeroSection() {
   const badges = ["Summa Cum Laude", "4.0 GPA", "ASU MS Psychology (CBI)"]
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-950 pt-24 pb-12">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-950 pt-8 pb-8">
       <div className="w-full max-w-6xl xl:max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
