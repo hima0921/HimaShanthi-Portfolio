@@ -156,11 +156,19 @@ export function Sidebar() {
             )
           })}
           <a
-            href="#contact"
+           href="#contact"
             onClick={() => setIsOpen(false)}
             className="block mt-3 bg-yellow-400 text-black font-bold py-2.5 px-4 text-center text-sm uppercase rounded-md border-2 border-black"
           >
             Contact
+          </a>
+          
+            <a
+              href="#contact"
+            onClick={() => setIsOpen(false)}
+            className="block mt-2 text-black dark:text-white font-bold py-2.5 px-4 text-center text-sm uppercase rounded-md border-2 border-black dark:border-white"
+          >
+            CV
           </a>
           <div className="flex gap-3 justify-center pt-4">
             <a
