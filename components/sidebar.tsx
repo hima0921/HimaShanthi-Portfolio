@@ -80,7 +80,7 @@ export function Sidebar() {
               href="#contact"
             className="border-2 border-black dark:border-white text-black dark:text-white font-bold py-2 px-4 text-xs uppercase rounded-md hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
           >
-            CV
+            CV/Resume
           </a>
           
             <a
@@ -169,7 +169,7 @@ export function Sidebar() {
             onClick={() => setIsOpen(false)}
             className="block mt-2 text-black dark:text-white font-bold py-2.5 px-4 text-center text-sm uppercase rounded-md border-2 border-black dark:border-white"
           >
-            CV
+            CV/Resume
           </a>
           <div className="flex gap-3 justify-center pt-4">
             <a
