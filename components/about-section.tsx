@@ -3,14 +3,28 @@ export function AboutSection() {
     {
       title: "A Little About Me",
       paragraphs: [
-        "Born and raised in Khammam, Telangana, India – a place where the biryani's rich, the culture's warm, and life smells just as good as the spices in the air. I recently graduated Summa Cum Laude from Arizona State University with dual degrees in Mathematics (Statistics) and Psychology and a minor in Philosophy — math for the certainty and logic, psychology for the harder, messier questions about people, and philosophy because I've always been drawn to both. I'm now starting my MS in Psychology (Cognition, Behavior, and Information) at ASU.",
+        "Born and raised in Khammam, Telangana, India, a place where the biryani's rich, the culture's warm, and life smells just as good as the spices in the air. I recently graduated Summa Cum Laude from Arizona State University with dual degrees in Mathematics (Statistics) and Psychology and a minor in Philosophy: math for the certainty and logic, psychology for the harder, messier questions about people, and philosophy because I've always been drawn to both. I'm now starting my MS in Psychology (Cognition, Behavior, and Information) at ASU.",
       ],
+      tags: [],
     },
     {
       title: "Research Interests",
       paragraphs: [
-        "My research interests sit at the intersection of cognitive science and human-AI interaction — specifically how people reason, make decisions, and develop trust when working alongside AI systems, including AI-assisted decision-making. I'm also deeply interested in UX research and explainable AI — particularly how interface and explanation design shapes user cognition and behavior — and in human-centered evaluation of AI technologies more broadly.",
-        "More broadly, I'm drawn to cognition itself — learning and memory, attention and perception, and the processes underlying everyday human behavior — and to building mathematical, statistical, and computational models, including predictive modeling, that capture and explain that behavior, along with time-series analysis of behavioral and movement data. My approach is grounded in research methods: experimental design, behavioral data analysis, statistical inference, and applied machine learning for behavioral and cognitive data. I'm especially interested in applying this to learning — including how people learn differently, such as those with learning disabilities — and in educational data science and learning analytics as ways to improve learning through data-driven approaches. I'm also curious about cultural differences in cognition and behavior more generally, not just in how people interact with AI.",
+        "My research interests sit at the intersection of cognitive science and human-AI interaction, specifically how people reason, make decisions, and develop trust when working alongside AI systems, including AI-assisted decision-making. I'm also deeply interested in UX research and explainable AI, particularly how interface and explanation design shapes user cognition and behavior, and in human-centered evaluation of AI technologies more broadly.",
+        "More broadly, I'm drawn to cognition itself: learning and memory, attention and perception, and the processes underlying everyday human behavior, along with building mathematical, statistical, and computational models, including predictive modeling, that capture and explain that behavior, plus time-series analysis of behavioral and movement data. My approach is grounded in research methods: experimental design, behavioral data analysis, statistical inference, and applied machine learning for behavioral and cognitive data. I'm especially interested in applying this to learning, including how people learn differently, such as those with learning disabilities, and in educational data science and learning analytics as ways to improve learning through data-driven approaches. I'm also curious about cultural differences in cognition and behavior more generally, not just in how people interact with AI.",
+      ],
+      tags: [
+        "Cognitive Science",
+        "Human-AI Interaction",
+        "Trust in AI",
+        "Explainable AI (XAI)",
+        "UX Research",
+        "Learning & Memory",
+        "Decision-Making",
+        "Quantitative Modeling",
+        "Learning Disabilities",
+        "Educational Data Science",
+        "Cultural Differences in Cognition",
       ],
     },
   ]
@@ -24,7 +38,7 @@ export function AboutSection() {
         <div className="space-y-10">
           {blocks.map((block, idx) => (
             <div key={idx} className="flex gap-5">
-              <div className="flex-shrink-0 hidden sm:flex flex-col items-center pt-1">
+              <div className="flex-shrink-0 hidden sm:flex flex-col items-center pt-2.5">
                 <span className="w-3 h-3 bg-yellow-400 border-2 border-black"></span>
                 {idx !== blocks.length - 1 && <span className="w-px flex-1 bg-gray-300 mt-2"></span>}
               </div>
@@ -35,6 +49,18 @@ export function AboutSection() {
                     {para}
                   </p>
                 ))}
+                {block.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {block.tags.map((tag, tIdx) => (
+                      <span
+                        key={tIdx}
+                        className="text-xs font-medium px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           ))}
