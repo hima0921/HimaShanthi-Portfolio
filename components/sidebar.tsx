@@ -101,7 +101,7 @@ export function Sidebar() {
             title="LinkedIn"
             className="w-8 h-8 border border-black dark:border-white text-black dark:text-white flex items-center justify-center rounded-full hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
           >
-            <Linkedin className="w-4 h-4" />
+            <Linkedin className="w-4 h-4 text-[#0A66C2] dark:text-[#0A66C2]" />
           </a>
           <a
             href="mailto:hrayapa1@asu.edu"
@@ -190,7 +190,7 @@ export function Sidebar() {
               title="LinkedIn"
               className="w-8 h-8 border border-black dark:border-white text-black dark:text-white flex items-center justify-center rounded-full"
             >
-              <Linkedin className="w-4 h-4" />
+              <Linkedin className="w-4 h-4 text-[#0A66C2] dark:text-[#0A66C2]" />
             </a>
             <a href="mailto:hrayapa1@asu.edu" aria-label="Email" title="Email" className="w-8 h-8 border border-black dark:border-white text-black dark:text-white flex items-center justify-center rounded-full">
               <Mail className="w-4 h-4" />
