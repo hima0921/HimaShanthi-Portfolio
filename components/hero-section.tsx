@@ -54,13 +54,13 @@ export function HeroSection() {
           </div>
 
           {/* Right Image */}
+            <div className="flex justify-center">
             <div className="relative w-full max-w-xs">
               <div className="border-8 border-black bg-gray-200">
                 <img src="/HimaShanthi-Portfolio/Profile.jpeg" alt="Hima Shanthi" className="w-full h-auto object-cover" />
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 border-4 border-yellow-400 bg-yellow-400 opacity-20"></div>
               <div className="absolute -top-4 -left-4 w-12 h-12 bg-yellow-400 border-4 border-black"></div>
-            </div>
           </div>
         </div>
       </div>
