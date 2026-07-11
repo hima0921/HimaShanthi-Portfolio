@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Hima Shanthi Rayapati | Portfolio",
   description:
     "Incoming MS student in Psychology (Cognition, Behavior, and Information) at ASU. Dual BS in Mathematics (Statistics) and Psychology. Research, quantitative methods, and human-AI interaction.",
+  openGraph: {
+    images: ["/HimaShanthi-Portfolio/og-image.png"],
+  },
 }
 
 export default function RootLayout({
