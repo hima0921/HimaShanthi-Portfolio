@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Incoming MS student in Psychology (Cognition, Behavior, and Information) at ASU. Dual BS in Mathematics (Statistics) and Psychology. Research, quantitative methods, and human-AI interaction.",
   openGraph: {
-    images: ["/HimaShanthi-Portfolio/og-image.png"],
+    images: ["/HimaShanthi-Portfolio/portfolio_photo.png"],
   },
 }
 
