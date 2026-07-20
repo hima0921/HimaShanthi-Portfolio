@@ -1,44 +1,12 @@
+import resumeData from "@/resume-data.json"
+
 export function ResearchSection() {
-  const research = [
-    {
-      title: "Research Assistant",
-      period: "Aug 2025 – Present",
-      inst: "Thinking Across Languages and Contexts Lab",
-      bullets: [
-        "Assist a graduate student with testing experiments built in jsPsych and JavaScript.",
-        "Help check whether data are recorded correctly and organized for analysis.",
-        "Perform exploratory data analysis and assist in interpreting experimental results under supervision.",
-      ],
-    },
-    {
-      title: "Research Assistant",
-      period: "Aug 2025 – Present",
-      inst: "Perception, Action, Language & Meaning Lab",
-      bullets: [
-        "Support participant training and assist with data collection in studies using VR, motion-capture, and eye-tracking.",
-        "Work with the lab's time-series behavioral data, learning how to clean, organize, and explore it.",
-        "Read papers and explore possible methods (e.g., multilevel vector autoregression) to understand which approaches might fit the lab's data.",
-        "Contribute to discussions by sharing preliminary notes and observations from trial analyses.",
-      ],
-    },
-    {
-      title: "Volunteer Research Assistant",
-      period: "Aug 2024 – Dec 2024",
-      inst: "Longitudinal & Behavioral Data Science Lab",
-      bullets: [
-        "Participated in bi-weekly lab meetings, contributing to discussions and staying updated on research progress.",
-      ],
-    },
-    {
-      title: "Research Assistant",
-      period: "Aug 2023 – Nov 2023",
-      inst: "Evolution, Ecology, and Social Behavior Lab",
-      bullets: [
-        "Assisted with survey design, pilot testing, data coding, and literature reviews in social cognition research.",
-        "Participated in lab meetings and contributed to discussions on study design and interpretation.",
-      ],
-    },
-  ]
+  const research = resumeData.researchExperience.map((r) => ({
+    title: r.role,
+    period: `${r.start} – ${r.end}`,
+    inst: r.lab,
+    bullets: r.bullets,
+  }))
 
   return (
     <section id="research" className="py-20 bg-gray-50 dark:bg-gray-900 border-t-2 border-black dark:border-gray-700">
