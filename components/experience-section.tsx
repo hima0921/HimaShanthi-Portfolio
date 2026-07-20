@@ -7,6 +7,7 @@ export function ExperienceSection() {
       duties: [
         "Review and categorize user comments to ensure adherence to quality standards",
         "Assign relevant tags to comments for improved organization and searchability",
+        "Evaluate AI-generated tags on user comments against manual annotation standards, identifying error patterns and comparing performance across different prompt versions to guide refinement.",
         "Perform data cleaning tasks, identifying and correcting inconsistencies",
         "Work with databases to structure data and ensure accessibility for future use",
       ],
