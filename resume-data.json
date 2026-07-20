@@ -1,0 +1,436 @@
+{
+  "personal": {
+    "name": "Hima Shanthi Rayapati",
+    "email": "hrayapa1@asu.edu",
+    "phone": "623-444-0816",
+    "linkedin": "https://www.linkedin.com/in/himarayapati",
+    "linkedinLabel": "LinkedIn",
+    "github": "https://github.com/hima0921",
+    "githubLabel": "GitHub",
+    "portfolio": "https://hima0921.github.io/HimaShanthi-Portfolio/",
+    "portfolioLabel": "Portfolio"
+  },
+
+  "education": [
+    {
+      "school": "Arizona State University",
+      "degree": "MS in Psychology (Cognition, Behavior, and Information)",
+      "start": "08/2026",
+      "end": "12/2027"
+    },
+    {
+      "school": "Arizona State University",
+      "degree": "BS in Psychology and Mathematics (Statistics)",
+      "start": "01/2023",
+      "end": "05/2026",
+      "notes": [
+        "Minor: Philosophy",
+        "GPA: 4.0/4.0"
+      ],
+      "portfolioExtras": {
+        "majorsLabel": "Mathematics (Statistics) & Psychology",
+        "badges": ["4.00 GPA", "Summa Cum Laude", "Dean's List (Multiple Semesters)"]
+      }
+    }
+  ],
+
+  "portfolioExtras": {
+    "scholarships": [
+      "New American University Scholarship",
+      "Andre Levard Mackey Scholarship"
+    ],
+    "coursework": {
+      "Statistics & Quantitative Methods": [
+        "STP 420 - Introductory Applied Statistics",
+        "STP 421 - Probability",
+        "STP 427 - Mathematical Statistics",
+        "STP 429 - Applied Regression",
+        "STP 311 - Regression & Time Series Analysis",
+        "STP 310 - Design/Analysis of Experiments",
+        "STP 470 - Predictive Analytics",
+        "MAT 343 - Applied Linear Algebra",
+        "MAT 275 - Modern Differential Equations"
+      ],
+      "Cognitive Science & Psychology": [
+        "PSY 324 - Memory and Cognition",
+        "PSY 434 - Cognitive Psychology",
+        "PSY 506 - Advanced Cognitive Science",
+        "PSY 579 - Cross-Cultural Psychology",
+        "PSY 290 - Research Methods"
+      ],
+      "Computing & Data Science": [
+        "CSE 110 - Principles of Programming",
+        "CSE 205 - Object-Oriented Programming & Data",
+        "SDS 510 - Data Wrangling",
+        "DAT 431 - Industry Tools for Data Science",
+        "MAT 420 - Scientific Computing",
+        "NEU 290 / NEU 394 - Data Science & Python for Neuro Majors"
+      ],
+      "Philosophy": [
+        "PHI 319 - Philosophy, Computing & AI",
+        "PHI 314 - Philosophy of Science"
+      ]
+    }
+  },
+
+  "skills": [
+    {
+      "category": "Programming & Statistical Tools",
+      "items": ["R", "SAS", "MATLAB", "Python", "JMP", "JASP", "SQL (Microsoft Access)", "Java", "C", "Bash", "REST APIs"],
+      "portfolioItems": ["R", "SAS", "MATLAB", "Python", "JMP", "JASP", "SQL", "Java", "C", "Bash", "REST APIs"],
+      "portfolioColor": "bg-blue-50 text-blue-700 border-blue-200",
+      "cvOrder": { "industry": 1, "research": 1 }
+    },
+    {
+      "category": "Machine Learning & NLP (Foundational)",
+      "items": ["Principal Component Analysis (PCA)", "neural network basics", "supervised vs. unsupervised learning", "model evaluation concepts", "introductory text analysis (Voyant Tools)"],
+      "portfolioItems": ["PCA", "Neural network basics", "Supervised vs. unsupervised learning", "Model evaluation", "Voyant Tools"],
+      "portfolioColor": "bg-rose-50 text-rose-700 border-rose-200",
+      "cvOrder": { "industry": 2, "research": 2 }
+    },
+    {
+      "category": "Data Analysis & Visualization",
+      "items": ["Tableau", "Excel", "Google Sheets", "Alteryx"],
+      "portfolioColor": "bg-green-50 text-green-700 border-green-200",
+      "cvOrder": { "industry": 3, "research": 4 }
+    },
+    {
+      "category": "Experimental & Research Tools",
+      "items": ["jsPsych", "PsychoPy", "JavaScript", "HTML", "CSS", "Qualtrics", "SurveyMonkey"],
+      "portfolioColor": "bg-yellow-50 text-yellow-800 border-yellow-300",
+      "cvOrder": { "industry": 4, "research": 3 }
+    },
+    {
+      "category": "Collaboration & Productivity",
+      "items": ["Slack", "Teams", "Zoom", "Word", "Outlook", "Adobe PowerPoint", "OneDrive", "Dropbox"],
+      "portfolioItems": ["Slack", "Teams", "Zoom", "Word", "PowerPoint", "OneDrive", "Dropbox"],
+      "portfolioColor": "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600",
+      "cvOrder": { "industry": 5, "research": 5 }
+    }
+  ],
+
+  "projects": [
+    {
+      "id": "trust-in-advice",
+      "title": "Trust in Advice: AI vs. Human Sources (Data Analysis & Written Report)",
+      "bullets": [
+        "Analyzed 30,000+ human-AI interactions to study effects of advice source.",
+        "Modeled decision changes before and after advice exposure.",
+        "Found advice correctness as primary driver, with modest AI-related effects."
+      ],
+      "resumeLink": { "label": "Trust in AI.com/2025", "href": "https://github.com/hima0921/AI-vs-human-decision-making" },
+      "portfolioMeta": "2025",
+      "portfolioCategory": "ai",
+      "portfolioTags": ["Human-AI Interaction", "Data Analysis"],
+      "links": [
+        { "label": "View on GitHub", "href": "https://github.com/hima0921/AI-vs-human-decision-making" }
+      ],
+      "cvOrder": { "industry": 1, "research": 5 }
+    },
+    {
+      "id": "stack-overflow-ai",
+      "title": "Analyzing the Impact of AI on Stack Overflow Participation (NLP & Data Analysis)",
+      "bullets": [
+        "Analyzed large-scale Stack Overflow data using Python to study changes in user behavior after AI tool releases.",
+        "Built time-series datasets and computed engagement metrics (answer rates, response time, retention) using Python.",
+        "Performed statistical comparisons and visualized platform-level trends.",
+        "Explored tag-based trends and basic NLP features to examine topic shifts."
+      ],
+      "resumeLink": { "label": "GitHub", "href": "https://github.com/hima0921/stack-overflow-ai-project" },
+      "portfolioMeta": "2025",
+      "portfolioCategory": "ai",
+      "portfolioTags": ["Python", "NLP", "Human-AI Interaction"],
+      "links": [
+        { "label": "View on GitHub", "href": "https://github.com/hima0921/stack-overflow-ai-project" }
+      ],
+      "cvOrder": { "industry": 2, "research": 1 }
+    },
+    {
+      "id": "baseball-analysis",
+      "title": "Predictive Analysis of Team Performance in Baseball using SAS",
+      "bullets": [
+        "Developed a statistical model to predict team wins using historical baseball data.",
+        "Conducted EDA and correlation analysis on Minnesota Twins batting records (1998-2024, excluding 2020).",
+        "Built multiple regression models to identify key predictors of team wins, selecting runs and batting averages for a parsimonious model.",
+        "Addressed multicollinearity and validated model assumptions to improve predictive accuracy."
+      ],
+      "portfolioBullets": [
+        "Developed a statistical model to predict team wins using historical baseball data.",
+        "Conducted EDA and correlation analysis on Minnesota Twins batting records (1998–2024, excluding 2020).",
+        "Built multiple regression models to identify key predictors of team wins, selecting runs and batting averages for a parsimonious model.",
+        "Addressed multicollinearity and validated model assumptions to improve predictive accuracy.",
+        "Provided data-driven insights into team performance metrics, contributing to baseball analytics research."
+      ],
+      "resumeLink": { "label": "Baseball Analysis.com/2024", "href": "https://hima0921.github.io/HimaShanthi-Portfolio/projects/baseball-performance-analysis.pdf" },
+      "portfolioMeta": "Fall 2024 · Class Project",
+      "portfolioInst": "Arizona State University",
+      "portfolioCategory": "stats",
+      "portfolioTags": ["SAS", "Regression", "Sports Analytics"],
+      "links": [
+        { "label": "View Report", "href": "/HimaShanthi-Portfolio/projects/baseball-performance-analysis.pdf" }
+      ],
+      "cvOrder": { "industry": 3 }
+    },
+    {
+      "id": "adp-stock",
+      "title": "Predicting Daily Stock Prices of ADP using SAS",
+      "bullets": [
+        "Created a predictive model for ADP stock prices based on financial indicators.",
+        "Applied EDA, correlation analysis, and multiple regression (stepwise, backward, forward selection) to determine significant predictors.",
+        "Developed a quadratic regression model with strong explanatory power while addressing multicollinearity.",
+        "Examined sector-specific dynamics and market trends influencing ADP's stock behavior."
+      ],
+      "portfolioBullets": [
+        "Created a predictive model for ADP stock prices based on financial indicators.",
+        "Analyzed daily stock prices (11/01/2023–10/31/2024) in the Industrials sector of the S&P 500.",
+        "Applied EDA, correlation analysis, and multiple regression (stepwise, backward, forward selection) to determine significant predictors.",
+        "Developed a quadratic regression model with strong explanatory power while addressing multicollinearity.",
+        "Examined sector-specific dynamics and market trends influencing ADP's stock behavior."
+      ],
+      "resumeLink": { "label": "ADP Stock.com/2024", "href": "https://hima0921.github.io/HimaShanthi-Portfolio/projects/adp-stock-prediction.pdf" },
+      "portfolioMeta": "Fall 2024 · Class Project",
+      "portfolioInst": "Arizona State University",
+      "portfolioCategory": "stats",
+      "portfolioTags": ["SAS", "Regression", "Finance"],
+      "links": [
+        { "label": "View Report", "href": "/HimaShanthi-Portfolio/projects/adp-stock-prediction.pdf" }
+      ],
+      "cvOrder": { "industry": 4 }
+    },
+    {
+      "id": "stochastic-learning-model",
+      "title": "Stochastic Dual-Timescale Model of Learning (ODE & SDE Modeling)",
+      "bullets": [
+        "Developed differential equation model of fast and slow learning processes.",
+        "Extended to stochastic framework to examine effects of noise.",
+        "Verified theoretical properties via simulation.",
+        "Linked model behavior to memory retention and learning variability."
+      ],
+      "resumeLink": { "label": "Final Project / 2025", "href": "https://github.com/hima0921/stochastic-dual-timescale-learning-model" },
+      "portfolioMeta": "Final Project · 2025",
+      "portfolioCategory": "cognitive",
+      "portfolioTags": ["ODE/SDE", "Cognitive Modeling"],
+      "links": [
+        { "label": "View on GitHub", "href": "https://github.com/hima0921/stochastic-dual-timescale-learning-model" }
+      ],
+      "cvOrder": { "industry": 5, "research": 2 }
+    },
+    {
+      "id": "cultural-trust",
+      "title": "Cultural Differences in Trust: AI vs. Human Expert Decision-Making",
+      "bullets": [
+        "Proposed cross-cultural study (Mexico vs. U.S.) on AI vs. human decision-making under conflict.",
+        "Outlined experimental design focusing on competence and legitimacy.",
+        "Formulated mixed-effects modeling approach for analysis.",
+        "Synthesized literature across cognition, decision-making, and human-AI interaction."
+      ],
+      "resumeLink": { "label": "Research Proposal / 2025", "href": "https://hima0921.github.io/HimaShanthi-Portfolio/projects/cultural-trust-presentation.html" },
+      "portfolioMeta": "Research Proposal · 2025",
+      "portfolioCategory": "ai",
+      "portfolioTags": ["Cross-Cultural", "Human-AI Interaction"],
+      "links": [
+        { "label": "View Presentation", "href": "/HimaShanthi-Portfolio/projects/cultural-trust-presentation.html" },
+        { "label": "View Pre-Registration", "href": "/HimaShanthi-Portfolio/projects/cultural-trust-preregistration.pdf" }
+      ],
+      "cvOrder": { "research": 3 }
+    },
+    {
+      "id": "reward-learning",
+      "title": "Probabilistic Reward Learning Task using PsychoPy",
+      "bullets": [
+        "Designed probabilistic reward-learning task with informative vs. non-informative features.",
+        "Examined learning under uncertainty and perceptual noise.",
+        "Collected and analyzed participant data using Python."
+      ],
+      "resumeLink": { "label": "Reward Learning.com/2025", "href": "https://hima0921.github.io/HimaShanthi-Portfolio/projects/reward-learning-presentation.pdf" },
+      "portfolioMeta": "2025",
+      "portfolioCategory": "cognitive",
+      "portfolioTags": ["PsychoPy", "Cognitive Modeling"],
+      "links": [
+        { "label": "View Presentation", "href": "/HimaShanthi-Portfolio/projects/reward-learning-presentation.pdf" },
+        { "label": "Download Task File", "href": "/HimaShanthi-Portfolio/projects/reward-learning-task.psyexp" }
+      ],
+      "cvOrder": { "industry": 6, "research": 4 }
+    },
+    {
+      "id": "mirror-neurons",
+      "title": "Research Proposal: Mirror Neurons, Social Synchrony, and Collaborative Learning",
+      "bullets": [
+        "Proposed a research framework synthesizing human and animal literature on mirror neuron systems and social synchrony.",
+        "Formulated hypotheses linking coordination mechanisms to collaborative learning outcomes."
+      ],
+      "resumeLink": { "label": "Proposal.com/2025", "href": "https://hima0921.github.io/HimaShanthi-Portfolio/projects/mirror-neurons-proposal.pdf" },
+      "portfolioMeta": "2025",
+      "portfolioCategory": "cognitive",
+      "portfolioTags": ["Cognitive Science", "Research Proposal"],
+      "links": [
+        { "label": "View Proposal", "href": "/HimaShanthi-Portfolio/projects/mirror-neurons-proposal.pdf" }
+      ],
+      "cvOrder": { "research": 6 }
+    },
+    {
+      "id": "ancova-presentation",
+      "title": "ANCOVA Presentation",
+      "onPortfolioOnly": true,
+      "bullets": [
+        "Conducted thorough research to understand and apply ANCOVA techniques.",
+        "Developed a presentation on ANCOVA using R and presentation tools such as Slidy.",
+        "Presented findings and insights effectively in a classroom setting."
+      ],
+      "portfolioMeta": "Spring 2024 · Class Project",
+      "portfolioInst": "Arizona State University",
+      "portfolioCategory": "stats",
+      "portfolioTags": ["Statistics", "R"],
+      "links": [
+        { "label": "View Presentation", "href": "/HimaShanthi-Portfolio/projects/ancova-presentation.html" }
+      ]
+    },
+    {
+      "id": "sleep-caffeine-study",
+      "title": "The Relationship Between University Students' Sleep and Caffeine Intake (Correlational Study)",
+      "onPortfolioOnly": true,
+      "bullets": [
+        "Designed and distributed a survey via Google Forms to gather data from students.",
+        "Conducted a literature review on the impact of caffeine intake on sleep patterns among students.",
+        "Imported and cleaned data using Excel to ensure accuracy.",
+        "Performed ANOVA and analyzed results using JASP and G*Power.",
+        "Authored a comprehensive research paper detailing findings and insights."
+      ],
+      "portfolioMeta": "Spring 2024 · Class Project",
+      "portfolioInst": "Arizona State University",
+      "portfolioCategory": "stats",
+      "portfolioTags": ["Survey Research", "ANOVA", "JASP"],
+      "links": [
+        { "label": "View Paper", "href": "/HimaShanthi-Portfolio/projects/sleep-caffeine-study.pdf" }
+      ]
+    }
+  ],
+
+  "researchExperience": [
+    {
+      "role": "Research Assistant",
+      "lab": "Thinking Across Languages and Contexts Lab",
+      "org": "ASU",
+      "start": "08/2025",
+      "end": "Present",
+      "bullets": [
+        "Assist a graduate student with testing experiments built in jsPsych and JavaScript.",
+        "Help check whether data are recorded correctly and organized for analysis.",
+        "Perform exploratory data analysis and assist in interpreting experimental results under supervision."
+      ]
+    },
+    {
+      "role": "Research Assistant",
+      "lab": "Perception, Action, Language & Meaning Lab",
+      "org": "ASU",
+      "start": "08/2025",
+      "end": "Present",
+      "bullets": [
+        "Support participant training and assist with data collection in studies using VR, motion-capture, and eye-tracking.",
+        "Work with the lab's time-series behavioral data, learning how to clean, organize, and explore it.",
+        "Read papers and explore possible methods (e.g., multilevel vector autoregression) to understand which approaches might fit the lab's data.",
+        "Contribute to discussions by sharing preliminary notes and observations from trial analyses."
+      ]
+    },
+    {
+      "role": "Volunteer Research Assistant",
+      "lab": "Longitudinal & Behavioral Data Science Lab",
+      "org": "ASU",
+      "start": "08/2024",
+      "end": "12/2024",
+      "bullets": [
+        "Participated in bi-weekly lab meetings, contributing to discussions and staying updated on research progress."
+      ]
+    },
+    {
+      "role": "Research Assistant",
+      "lab": "Evolution, Ecology, and Social Behavior Lab",
+      "org": "ASU",
+      "start": "08/2023",
+      "end": "11/2023",
+      "bullets": [
+        "Assisted with survey design, pilot testing, data coding, and literature reviews in social cognition research.",
+        "Participated in lab meetings and contributed to discussions on study design and interpretation."
+      ]
+    }
+  ],
+
+  "workExperience": [
+    {
+      "title": "Research Aide",
+      "org": "ASU",
+      "location": "Tempe, AZ",
+      "start": "12/2024",
+      "end": "Present",
+      "bullets": [
+        "Review, categorize, and structure user-generated data to ensure quality and consistency.",
+        "Assign relevant tags to comments for improved organization and searchability.",
+        "Evaluate AI-generated tags on user comments against manual annotation standards, identifying error patterns and comparing performance across different prompt versions to guide refinement.",
+        "Perform data cleaning tasks, identifying and correcting inconsistencies to maintain data accuracy.",
+        "Work with databases to structure data and ensure accessibility for future use."
+      ],
+      "portfolioBullets": [
+        "Review and categorize user comments to ensure adherence to quality standards",
+        "Assign relevant tags to comments for improved organization and searchability",
+        "Evaluate AI-generated tags on user comments against manual annotation standards, identifying error patterns and comparing performance across different prompt versions to guide refinement.",
+        "Perform data cleaning tasks, identifying and correcting inconsistencies",
+        "Work with databases to structure data and ensure accessibility for future use"
+      ]
+    },
+    {
+      "title": "Lead Survey Assistant",
+      "org": "ASU",
+      "location": "Tempe, AZ",
+      "start": "05/2023",
+      "end": "Present",
+      "bullets": [
+        "Conduct phone-based survey interviews with currently employed and recently graduated ASU students, ensuring accurate and comprehensive data collection by clarifying responses and addressing any ambiguities.",
+        "Assist in the hiring process, including interviewing and evaluating candidates.",
+        "Perform data cleaning and ensure the integrity of datasets for analysis.",
+        "Train new student workers in survey procedures and oversee testing and calibration of survey tools."
+      ],
+      "portfolioBullets": [
+        "Conduct phone-based survey interviews with employed and recently graduated ASU students",
+        "Assist in the hiring process, including interviewing and evaluating candidates",
+        "Perform data cleaning and ensure the integrity of datasets for analysis",
+        "Train new student workers in survey procedures and oversee tool calibration"
+      ]
+    },
+    {
+      "title": "Intern",
+      "org": "Public Safety Crisis Solution",
+      "location": "Phoenix, AZ",
+      "start": "08/2024",
+      "end": "11/2024",
+      "bullets": [
+        "Performed quantitative analysis to support research, program development, and accreditation documentation.",
+        "Contributed research-based content on clinical procedures addressing first responders' mental health initiatives."
+      ]
+    },
+    {
+      "title": "Advising Office Aide",
+      "org": "ASU",
+      "location": "Tempe, AZ",
+      "start": "08/2023",
+      "end": "05/2024",
+      "bullets": [
+        "Supported advising operations through scheduling, communication, and administrative workflows.",
+        "Managed data entry, marketing/outreach materials, and front-desk support for students and staff."
+      ],
+      "portfolioBullets": [
+        "Engaged with students, faculty, and staff through effective communication",
+        "Performed administrative tasks including data entry, filing, and calendar management",
+        "Worked closely with advising staff to provide exceptional student support"
+      ]
+    }
+  ],
+
+  "cvConfig": {
+    "industry": {
+      "sectionOrder": ["education", "skills", "projects", "researchExperience", "workExperience"]
+    },
+    "research": {
+      "sectionOrder": ["education", "researchExperience", "projects", "workExperience", "skills"]
+    }
+  }
+}
