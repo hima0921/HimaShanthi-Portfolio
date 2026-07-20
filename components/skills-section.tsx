@@ -1,31 +1,13 @@
+import resumeData from "@/resume-data.json"
+
 export function SkillsSection() {
-  const skillCategories = [
-    {
-      category: "Programming & Statistical Tools",
-      skills: ["R", "SAS", "MATLAB", "Python", "JMP", "JASP", "SQL", "Java", "C", "Bash", "REST APIs"],
-      color: "bg-blue-50 text-blue-700 border-blue-200",
-    },
-    {
-      category: "Machine Learning & NLP (Foundational)",
-      skills: ["PCA", "Neural network basics", "Supervised vs. unsupervised learning", "Model evaluation", "Voyant Tools"],
-      color: "bg-rose-50 text-rose-700 border-rose-200",
-    },
-    {
-      category: "Experimental & Research Tools",
-      skills: ["jsPsych", "PsychoPy", "JavaScript", "HTML", "CSS", "Qualtrics", "SurveyMonkey"],
-      color: "bg-yellow-50 text-yellow-800 border-yellow-300",
-    },
-    {
-      category: "Data Analysis & Visualization",
-      skills: ["Tableau", "Excel", "Google Sheets", "Alteryx"],
-      color: "bg-green-50 text-green-700 border-green-200",
-    },
-    {
-      category: "Collaboration & Productivity",
-      skills: ["Slack", "Teams", "Zoom", "Word", "PowerPoint", "OneDrive", "Dropbox"],
-      color: "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600",
-    },
-  ]
+  const skillCategories = [...resumeData.skills]
+    .sort((a, b) => a.cvOrder.industry - b.cvOrder.industry)
+    .map((cat) => ({
+      category: cat.category,
+      skills: cat.portfolioItems ?? cat.items,
+      color: cat.portfolioColor,
+    }))
 
   return (
     <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-900 border-t-2 border-black dark:border-gray-700">
