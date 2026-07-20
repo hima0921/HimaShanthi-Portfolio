@@ -1,4 +1,16 @@
+import resumeData from "@/resume-data.json"
+
 export function EducationSection() {
+  const [msDegree, bsDegree] = resumeData.education
+  const bsExtras = bsDegree.portfolioExtras
+  const { scholarships, coursework } = resumeData.portfolioExtras
+  const courseworkColumns: { label: string; color: string }[] = [
+    { label: "Statistics & Quantitative Methods", color: "text-blue-700" },
+    { label: "Cognitive Science & Psychology", color: "text-yellow-700" },
+    { label: "Computing & Data Science", color: "text-green-700" },
+    { label: "Philosophy", color: "text-rose-700" },
+  ]
+
   return (
     <section id="education" className="py-20 bg-gray-50 dark:bg-gray-900 border-t-2 border-black dark:border-gray-700">
       <div className="w-full max-w-6xl xl:max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16">
@@ -12,15 +24,15 @@ export function EducationSection() {
             <div className="p-6 flex-1 grid md:grid-cols-3 gap-4">
               <div>
                 <p className="font-bold uppercase text-xs text-gray-500 dark:text-gray-400">Degree</p>
-                <p className="text-lg font-semibold">MS in Psychology (Cognition, Behavior, and Information)</p>
+                <p className="text-lg font-semibold">{msDegree.degree}</p>
               </div>
               <div>
                 <p className="font-bold uppercase text-xs text-gray-500 dark:text-gray-400">University</p>
-                <p className="text-lg">Arizona State University</p>
+                <p className="text-lg">{msDegree.school}</p>
               </div>
               <div>
                 <p className="font-bold uppercase text-xs text-gray-500 dark:text-gray-400">Period</p>
-                <p className="text-lg">Aug 2026 - Present</p>
+                <p className="text-lg">{msDegree.start} - {msDegree.end}</p>
               </div>
             </div>
           </div>
@@ -36,33 +48,38 @@ export function EducationSection() {
                 </div>
                 <div>
                   <p className="font-bold uppercase text-xs text-gray-500 dark:text-gray-400">University</p>
-                  <p className="text-lg">Arizona State University</p>
+                  <p className="text-lg">{bsDegree.school}</p>
                 </div>
                 <div>
                   <p className="font-bold uppercase text-xs text-gray-500 dark:text-gray-400">Period</p>
-                  <p className="text-lg">Jan 2023 - May 2026</p>
+                  <p className="text-lg">{bsDegree.start} - {bsDegree.end}</p>
                 </div>
               </div>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <p className="font-bold uppercase text-xs text-gray-500 dark:text-gray-400">Majors</p>
-                  <p className="text-lg">Mathematics (Statistics) & Psychology</p>
+                  <p className="text-lg">{bsExtras?.majorsLabel}</p>
                 </div>
                 <div>
                   <p className="font-bold uppercase text-xs text-gray-500 dark:text-gray-400">Minor</p>
-                  <p className="text-lg">Philosophy</p>
+                  <p className="text-lg">{bsDegree.notes?.find((n) => n.startsWith("Minor"))?.replace("Minor: ", "")}</p>
                 </div>
               </div>
               <div className="flex flex-wrap gap-2 mt-4">
-                <span className="text-xs font-bold uppercase tracking-wide px-3 py-1.5 bg-yellow-400 text-black rounded-full border border-black">
-                  4.00 GPA
-                </span>
-                <span className="text-xs font-bold uppercase tracking-wide px-3 py-1.5 bg-black text-yellow-400 rounded-full">
-                  Summa Cum Laude
-                </span>
-                <span className="text-xs font-bold uppercase tracking-wide px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full">
-                  Dean's List (Multiple Semesters)
-                </span>
+                {bsExtras?.badges.map((badge, i) => (
+                  <span
+                    key={i}
+                    className={
+                      i === 0
+                        ? "text-xs font-bold uppercase tracking-wide px-3 py-1.5 bg-yellow-400 text-black rounded-full border border-black"
+                        : i === 1
+                        ? "text-xs font-bold uppercase tracking-wide px-3 py-1.5 bg-black text-yellow-400 rounded-full"
+                        : "text-xs font-bold uppercase tracking-wide px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full"
+                    }
+                  >
+                    {badge}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
@@ -73,8 +90,9 @@ export function EducationSection() {
             <div className="p-6 flex-1">
               <h3 className="text-lg font-bold mb-4 text-black dark:text-white">Scholarships</h3>
               <div className="flex flex-wrap gap-2">
-                <span className="text-sm px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">New American University Scholarship</span>
-                <span className="text-sm px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">Andre Levard Mackey Scholarship</span>
+                {scholarships.map((s, i) => (
+                  <span key={i} className="text-sm px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">{s}</span>
+                ))}
               </div>
             </div>
           </div>
@@ -85,48 +103,16 @@ export function EducationSection() {
             <div className="p-6 md:p-8 flex-1">
             <h3 className="text-lg font-bold mb-6 text-black dark:text-white">Relevant Coursework</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <p className="font-bold mb-2 text-sm uppercase tracking-wide text-blue-700">Statistics & Quantitative Methods</p>
-                <ul className="text-base space-y-1 text-gray-700 dark:text-gray-300">
-                  <li>• STP 420 – Introductory Applied Statistics</li>
-                  <li>• STP 421 – Probability</li>
-                  <li>• STP 427 – Mathematical Statistics</li>
-                  <li>• STP 429 – Applied Regression</li>
-                  <li>• STP 311 – Regression & Time Series Analysis</li>
-                  <li>• STP 310 – Design/Analysis of Experiments</li>
-                  <li>• STP 470 – Predictive Analytics</li>
-                  <li>• MAT 343 – Applied Linear Algebra</li>
-                  <li>• MAT 275 – Modern Differential Equations</li>
-                </ul>
-              </div>
-              <div>
-                <p className="font-bold mb-2 text-sm uppercase tracking-wide text-yellow-700">Cognitive Science & Psychology</p>
-                <ul className="text-base space-y-1 text-gray-700 dark:text-gray-300">
-                  <li>• PSY 324 – Memory and Cognition</li>
-                  <li>• PSY 434 – Cognitive Psychology</li>
-                  <li>• PSY 506 – Advanced Cognitive Science</li>
-                  <li>• PSY 579 – Cross-Cultural Psychology</li>
-                  <li>• PSY 290 – Research Methods</li>
-                </ul>
-              </div>
-              <div>
-                <p className="font-bold mb-2 text-sm uppercase tracking-wide text-green-700">Computing & Data Science</p>
-                <ul className="text-base space-y-1 text-gray-700 dark:text-gray-300">
-                  <li>• CSE 110 – Principles of Programming</li>
-                  <li>• CSE 205 – Object-Oriented Programming & Data</li>
-                  <li>• SDS 510 – Data Wrangling</li>
-                  <li>• DAT 431 – Industry Tools for Data Science</li>
-                  <li>• MAT 420 – Scientific Computing</li>
-                  <li>• NEU 290 / NEU 394 – Data Science & Python for Neuro Majors</li>
-                </ul>
-              </div>
-              <div>
-                <p className="font-bold mb-2 text-sm uppercase tracking-wide text-rose-700">Philosophy</p>
-                <ul className="text-base space-y-1 text-gray-700 dark:text-gray-300">
-                  <li>• PHI 319 – Philosophy, Computing & AI</li>
-                  <li>• PHI 314 – Philosophy of Science</li>
-                </ul>
-              </div>
+              {courseworkColumns.map((col) => (
+                <div key={col.label}>
+                  <p className={`font-bold mb-2 text-sm uppercase tracking-wide ${col.color}`}>{col.label}</p>
+                  <ul className="text-base space-y-1 text-gray-700 dark:text-gray-300">
+                    {coursework[col.label as keyof typeof coursework].map((course, i) => (
+                      <li key={i}>• {course}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
           </div>
