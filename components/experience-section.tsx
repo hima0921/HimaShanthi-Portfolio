@@ -1,48 +1,12 @@
+import resumeData from "@/resume-data.json"
+
 export function ExperienceSection() {
-  const jobs = [
-    {
-      title: "Research Aide",
-      company: "Arizona State University, Tempe, AZ",
-      period: "12/2024 - Present",
-      duties: [
-        "Review and categorize user comments to ensure adherence to quality standards",
-        "Assign relevant tags to comments for improved organization and searchability",
-        "Evaluate AI-generated tags on user comments against manual annotation standards, identifying error patterns and comparing performance across different prompt versions to guide refinement.",
-        "Perform data cleaning tasks, identifying and correcting inconsistencies",
-        "Work with databases to structure data and ensure accessibility for future use",
-      ],
-    },
-    {
-      title: "Lead Survey Assistant",
-      company: "Arizona State University, Tempe, AZ",
-      period: "05/2023 - Present",
-      duties: [
-        "Conduct phone-based survey interviews with employed and recently graduated ASU students",
-        "Assist in the hiring process, including interviewing and evaluating candidates",
-        "Perform data cleaning and ensure the integrity of datasets for analysis",
-        "Train new student workers in survey procedures and oversee tool calibration",
-      ],
-    },
-    {
-      title: "Intern",
-      company: "Public Safety Crisis Solution, Phoenix, AZ",
-      period: "08/2024 - 11/2024",
-      duties: [
-        "Performed quantitative analysis to support research, program development, and accreditation documentation",
-        "Contributed research-based content on clinical procedures addressing first responders' mental health initiatives",
-      ],
-    },
-    {
-      title: "Advising Office Aide",
-      company: "Arizona State University, Tempe, AZ",
-      period: "08/2023 - 05/2024",
-      duties: [
-        "Engaged with students, faculty, and staff through effective communication",
-        "Performed administrative tasks including data entry, filing, and calendar management",
-        "Worked closely with advising staff to provide exceptional student support",
-      ],
-    },
-  ]
+  const jobs = resumeData.workExperience.map((job) => ({
+    title: job.title,
+    company: `${job.org}, ${job.location}`,
+    period: `${job.start} - ${job.end}`,
+    duties: job.portfolioBullets ?? job.bullets,
+  }))
 
   return (
     <section id="experience" className="py-20 bg-white dark:bg-gray-950 border-t-2 border-black dark:border-gray-700">
