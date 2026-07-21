@@ -1,0 +1,47 @@
+name: Regenerate Resume PDFs
+
+# Runs only when resume-data.json changes, so editing other files
+# (like your portfolio components) won't trigger a pointless rebuild.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "resume-data.json"
+      - "templates/**"
+      - "scripts/generate-resume.js"
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install LaTeX (pdflatex + required packages)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            texlive-latex-base \
+            texlive-latex-extra \
+            texlive-latex-recommended \
+            texlive-fonts-recommended
+
+      - name: Generate PDFs from resume-data.json
+        run: node scripts/generate-resume.js
+
+      - name: Commit updated PDFs back to the repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/CV_Industry.pdf public/CV_AI_and_Research.pdf
+          if git diff --cached --quiet; then
+            echo "No PDF changes to commit."
+          else
+            git commit -m "Auto-regenerate resume PDFs from resume-data.json"
+            git push
+          fi
