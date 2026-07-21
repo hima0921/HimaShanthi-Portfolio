@@ -83,7 +83,7 @@
     },
     {
       "category": "Machine Learning & NLP (Foundational)",
-      "items": ["Principal Component Analysis (PCA)", "neural network basics", "supervised vs. unsupervised learning", "model evaluation concepts", "introductory text analysis (Voyant Tools)"],
+      "items": ["Principal Component Analysis (PCA)", "Neural network basics", "Supervised vs. Unsupervised learning", "Model evaluation concepts", "Introductory text analysis (Voyant Tools)"],
       "portfolioItems": ["PCA", "Neural network basics", "Supervised vs. Unsupervised learning", "Model Evaluation", "Voyant Tools"],
       "portfolioColor": "bg-rose-50 text-rose-700 border-rose-200",
       "cvOrder": { "industry": 2, "research": 2 }
