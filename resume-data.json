@@ -118,13 +118,13 @@
         "Modeled decision changes before and after advice exposure.",
         "Found advice correctness as primary driver, with modest AI-related effects."
       ],
-      "resumeLink": { "label": "Trust in AI.com/2025", "href": "https://github.com/hima0921/AI-vs-human-decision-making" },
+      "resumeLink": { "label": "Trust in AI.com/2025", "href": "https://hima0921.github.io/HimaShanthi-Portfolio/projects/trust-in-advice-report.pdf" },
       "portfolioMeta": "2025",
       "portfolioCategory": "ai",
       "portfolioTags": ["Human-AI Interaction", "Data Analysis"],
       "links": [
-        { "label": "View on GitHub", "href": "https://github.com/hima0921/AI-vs-human-decision-making" }
-      ],
+      { "label": "View Report", "href": "/HimaShanthi-Portfolio/projects/trust-in-advice-report.pdf" }
+      ]
       "cvOrder": { "industry": 1, "research": 5 }
     },
     {
