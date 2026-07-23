@@ -326,7 +326,7 @@
       "start": "08/2025",
       "end": "Present",
       "bullets": [
-        "Support participant training and assist with data collection in studies using VR, motion-capture, and eye-tracking.",
+        "Run two-person collaborative task sessions (e.g., Taboo), observing and recording coordination, communication, and performance data using VR, motion-capture, and eye-tracking.",
         "Work with the lab's time-series behavioral data, learning how to clean, organize, and explore it.",
         "Read papers and explore possible methods (e.g., multilevel vector autoregression) to understand which approaches might fit the lab's data.",
         "Contribute to discussions by sharing preliminary notes and observations from trial analyses."
@@ -365,14 +365,14 @@
       "bullets": [
         "Review, categorize, and structure user-generated data to ensure quality and consistency.",
         "Assign relevant tags to comments for improved organization and searchability.",
-        "Evaluate AI-generated tags on user comments against manual annotation standards, identifying error patterns and comparing performance across different prompt versions to guide refinement.",
+        "Evaluate AI-generated tags against human annotation standards, analyzing human-AI agreement and error patterns across prompt versions to guide model refinement.",
         "Perform data cleaning tasks, identifying and correcting inconsistencies to maintain data accuracy.",
         "Work with databases to structure data and ensure accessibility for future use."
       ],
       "portfolioBullets": [
         "Review and categorize user comments to ensure adherence to quality standards",
         "Assign relevant tags to comments for improved organization and searchability",
-        "Evaluate AI-generated tags on user comments against manual annotation standards, identifying error patterns and comparing performance across different prompt versions to guide refinement.",
+        "Evaluate AI-generated tags against human annotation standards, analyzing human-AI agreement and error patterns across prompt versions to guide model refinement.",
         "Perform data cleaning tasks, identifying and correcting inconsistencies",
         "Work with databases to structure data and ensure accessibility for future use"
       ]
