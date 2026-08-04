@@ -1,5 +1,5 @@
 export function HeroSection() {
-  const badges = ["Summa Cum Laude", "4.0 GPA", "ASU MS Psychology (CBI)"]
+  const badges = ["Summa Cum Laude", "4.0 GPA", "ASU MS Data Science, Analytics and Engineering (Human-centered Applications)"]
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-950 pt-8 pb-8">
@@ -20,7 +20,7 @@ export function HeroSection() {
             <ul className="text-base leading-relaxed text-gray-700 dark:text-gray-300 max-w-sm space-y-2">
               <li className="flex gap-2">
                 <span className="text-yellow-500 font-black">▸</span>
-                <span>Incoming MS student in Psychology (Cognition, Behavior, and Information), Arizona State University</span>
+                <span>Incoming MS student in Data Science, Analytics and Engineering (Human-centered Applications), Arizona State University</span>
               </li>
               <li className="flex gap-2">
                 <span className="text-yellow-500 font-black">▸</span>
