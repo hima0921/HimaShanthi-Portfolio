@@ -1,5 +1,5 @@
 export function HeroSection() {
-  const badges = ["Summa Cum Laude", "4.0 GPA", "ASU MS Data Science, Analytics and Engineering (Human-centered Applications)"]
+  const badges = ["Summa Cum Laude", "4.0 GPA", "ASU MS DSAE-HCA"]
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-950 pt-8 pb-8">
