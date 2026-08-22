@@ -3,7 +3,7 @@ export function AboutSection() {
     {
       title: "A Little About Me",
       paragraphs: [
-        "Born and raised in Khammam, Telangana, India, a place where the biryani's rich, the culture's warm, and life smells just as good as the spices in the air. I recently graduated Summa Cum Laude from Arizona State University with dual degrees in Mathematics (Statistics) and Psychology and a minor in Philosophy: math for the certainty and logic, psychology for the harder, messier questions about people, and philosophy because I've always been drawn to both. I'm now starting my MS in Psychology (Cognition, Behavior, and Information) at ASU.",
+        "Born and raised in Khammam, Telangana, India, a place where the biryani's rich, the culture's warm, and life smells just as good as the spices in the air. I recently graduated Summa Cum Laude from Arizona State University with dual degrees in Mathematics (Statistics) and Psychology and a minor in Philosophy: math for the certainty and logic, psychology for the harder, messier questions about people, and philosophy because I've always been drawn to both. I'm now starting my MS in Data Science, Analytics and Engineering (Human Centered Applications) at ASU.",
       ],
       tags: [],
     },
