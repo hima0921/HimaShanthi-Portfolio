@@ -10,13 +10,16 @@
     "portfolio": "https://hima0921.github.io/HimaShanthi-Portfolio/",
     "portfolioLabel": "Portfolio"
   },
-
   "education": [
     {
       "school": "Arizona State University",
       "degree": "Data Science, Analytics and Engineering (Human-Centered Applications)",
       "start": "08/2026",
-      "end": "12/2027"
+      "end": "12/2027",
+      "notes": [
+        "Ira A. Fulton Schools of Engineering Graduate Scholarship (awarded for academic performance)",
+        "ASU AI Scholars Program, 2026–27 (year-long cohort with workshops on applied AI tools)"
+      ]
     },
     {
       "school": "Arizona State University",
@@ -33,9 +36,9 @@
       }
     }
   ],
-
   "portfolioExtras": {
     "scholarships": [
+      "Ira A. Fulton Schools of Engineering Graduate Scholarship",
       "New American University Scholarship",
       "Andre Levard Mackey Scholarship"
     ],
@@ -72,44 +75,76 @@
       ]
     }
   },
-
   "skills": [
     {
       "category": "Programming & Statistical Tools",
       "items": ["R", "SAS", "MATLAB", "Python", "JMP", "JASP", "SQL (Microsoft Access)", "Java", "C", "Bash", "REST APIs"],
       "portfolioItems": ["R", "SAS", "MATLAB", "Python", "JMP", "JASP", "SQL", "Java", "C", "Bash", "REST APIs"],
       "portfolioColor": "bg-blue-50 text-blue-700 border-blue-200",
-      "cvOrder": { "industry": 1, "research": 1 }
+      "cvOrder": { "industry": 1, "research": 1, "full": 1 }
     },
     {
       "category": "Machine Learning & NLP (Foundational)",
       "items": ["Principal Component Analysis (PCA)", "Neural network basics", "Supervised vs. Unsupervised learning", "Model evaluation concepts", "Introductory text analysis (Voyant Tools)"],
       "portfolioItems": ["PCA", "Neural network basics", "Supervised vs. Unsupervised learning", "Model Evaluation", "Voyant Tools"],
       "portfolioColor": "bg-rose-50 text-rose-700 border-rose-200",
-      "cvOrder": { "industry": 2, "research": 2 }
+      "cvOrder": { "industry": 2, "research": 2, "full": 2 }
     },
     {
       "category": "Data Analysis & Visualization",
       "items": ["Tableau", "Excel", "Google Sheets", "Alteryx"],
       "portfolioColor": "bg-green-50 text-green-700 border-green-200",
-      "cvOrder": { "industry": 3, "research": 4 }
+      "cvOrder": { "industry": 3, "research": 4, "full": 3 }
+    },
+    {
+      "category": "Design & Prototyping",
+      "items": ["Figma", "Figma Motion"],
+      "portfolioColor": "bg-purple-50 text-purple-700 border-purple-200",
+      "cvOrder": { "industry": 4, "research": 5, "full": 5 }
     },
     {
       "category": "Experimental & Research Tools",
       "items": ["jsPsych", "PsychoPy", "JavaScript", "HTML", "CSS", "Qualtrics", "SurveyMonkey"],
       "portfolioColor": "bg-yellow-50 text-yellow-800 border-yellow-300",
-      "cvOrder": { "industry": 4, "research": 3 }
+      "cvOrder": { "industry": 5, "research": 3, "full": 4 }
     },
     {
       "category": "Collaboration & Productivity",
       "items": ["Slack", "Teams", "Zoom", "Word", "Outlook", "Adobe PowerPoint", "OneDrive", "Dropbox"],
       "portfolioItems": ["Slack", "Teams", "Zoom", "Word", "PowerPoint", "OneDrive", "Dropbox"],
       "portfolioColor": "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600",
-      "cvOrder": { "industry": 5, "research": 5 }
+      "cvOrder": { "industry": 6, "research": 6, "full": 6 }
     }
   ],
-
   "projects": [
+    {
+      "id": "fairness-llm-bias",
+      "title": "Fairness in ML: Detecting Bias in LLM Answers (CSE 575, in progress)",
+      "bullets": [
+        "Building a classifier that flags biased answers from an LLM, using the BBQ bias benchmark dataset.",
+        "Testing whether the classifier can pick the least biased answer out of several options the LLM gives."
+      ],
+      "portfolioMeta": "In progress · Class Project",
+      "portfolioInst": "Arizona State University",
+      "portfolioCategory": "ai",
+      "portfolioTags": ["Fairness in ML", "LLMs"],
+      "links": [],
+      "cvOrder": { "industry": 3, "research": 6, "full": 4 }
+    },
+    {
+      "id": "batadal-anomaly-detection",
+      "title": "Cyber Attack Detection in Water System Sensor Data (CSE 575, in progress)",
+      "bullets": [
+        "Group project using the BATADAL water distribution system dataset to detect cyber attacks from sensor readings.",
+        "Helping with the project proposal, report, and presentation."
+      ],
+      "portfolioMeta": "In progress · Class Project",
+      "portfolioInst": "Arizona State University",
+      "portfolioCategory": "ai",
+      "portfolioTags": ["Anomaly Detection", "Time Series"],
+      "links": [],
+      "cvOrder": { "industry": 6, "full": 9 }
+    },
     {
       "id": "trust-in-advice",
       "title": "Trust in Advice: AI vs. Human Sources (Data Analysis & Written Report)",
@@ -123,9 +158,9 @@
       "portfolioCategory": "ai",
       "portfolioTags": ["Human-AI Interaction", "Data Analysis"],
       "links": [
-      { "label": "View Report", "href": "/HimaShanthi-Portfolio/projects/trust-in-advice-report.pdf" }
+        { "label": "View Report", "href": "/HimaShanthi-Portfolio/projects/trust-in-advice-report.pdf" }
       ],
-      "cvOrder": { "industry": 1, "research": 5 }
+      "cvOrder": { "industry": 2, "research": 1, "full": 1 }
     },
     {
       "id": "stack-overflow-ai",
@@ -143,7 +178,7 @@
       "links": [
         { "label": "View on GitHub", "href": "https://github.com/hima0921/stack-overflow-ai-project" }
       ],
-      "cvOrder": { "industry": 2, "research": 1 }
+      "cvOrder": { "industry": 1, "research": 3, "full": 2 }
     },
     {
       "id": "baseball-analysis",
@@ -169,7 +204,7 @@
       "links": [
         { "label": "View Report", "href": "/HimaShanthi-Portfolio/projects/baseball-performance-analysis.pdf" }
       ],
-      "cvOrder": { "industry": 3 }
+      "cvOrder": { "industry": 4, "full": 7 }
     },
     {
       "id": "adp-stock",
@@ -195,7 +230,7 @@
       "links": [
         { "label": "View Report", "href": "/HimaShanthi-Portfolio/projects/adp-stock-prediction.pdf" }
       ],
-      "cvOrder": { "industry": 4 }
+      "cvOrder": { "industry": 5, "full": 8 }
     },
     {
       "id": "stochastic-learning-model",
@@ -213,7 +248,7 @@
       "links": [
         { "label": "View on GitHub", "href": "https://github.com/hima0921/stochastic-dual-timescale-learning-model" }
       ],
-      "cvOrder": { "industry": 5, "research": 2 }
+      "cvOrder": { "research": 4, "full": 5 }
     },
     {
       "id": "cultural-trust",
@@ -232,7 +267,7 @@
         { "label": "View Presentation", "href": "/HimaShanthi-Portfolio/projects/cultural-trust-presentation.html" },
         { "label": "View Pre-Registration", "href": "/HimaShanthi-Portfolio/projects/cultural-trust-preregistration.pdf" }
       ],
-      "cvOrder": { "research": 3 }
+      "cvOrder": { "research": 2, "full": 3 }
     },
     {
       "id": "reward-learning",
@@ -250,7 +285,7 @@
         { "label": "View Presentation", "href": "/HimaShanthi-Portfolio/projects/reward-learning-presentation.pdf" },
         { "label": "Download Task File", "href": "/HimaShanthi-Portfolio/projects/reward-learning-task.psyexp" }
       ],
-      "cvOrder": { "industry": 6, "research": 4 }
+      "cvOrder": { "research": 5, "full": 6 }
     },
     {
       "id": "mirror-neurons",
@@ -266,7 +301,7 @@
       "links": [
         { "label": "View Proposal", "href": "/HimaShanthi-Portfolio/projects/mirror-neurons-proposal.pdf" }
       ],
-      "cvOrder": { "research": 6 }
+      "cvOrder": { "research": 7, "full": 10 }
     },
     {
       "id": "ancova-presentation",
@@ -305,8 +340,32 @@
       ]
     }
   ],
-
   "researchExperience": [
+    {
+      "role": "Student Researcher",
+      "lab": "CARE Lab (Prof. Qiaoning Zhang)",
+      "org": "ASU",
+      "start": "08/2026",
+      "end": "Present",
+      "bullets": [
+        "Attend lab meetings and discuss ongoing research on human-AI interaction.",
+        "Developing my own research project on AI and human trust and learning (in progress)."
+      ],
+      "cvOrder": { "industry": 4, "research": 1, "full": 1 }
+    },
+    {
+      "role": "UX Researcher (UXR Guild)",
+      "lab": "NEXT Lab",
+      "org": "ASU",
+      "start": "08/2026",
+      "end": "Present",
+      "bullets": [
+        "Test games, digital twins, and interactive apps with users to find usability problems and collect feedback.",
+        "Find and document bugs and performance issues and share them with developers.",
+        "Work with developers on UI and accessibility improvements."
+      ],
+      "cvOrder": { "industry": 1, "research": 5, "full": 2 }
+    },
     {
       "role": "Research Assistant",
       "lab": "Thinking Across Languages and Contexts Lab",
@@ -317,7 +376,8 @@
         "Assist a graduate student with testing experiments built in jsPsych and JavaScript.",
         "Help check whether data are recorded correctly and organized for analysis.",
         "Perform exploratory data analysis and assist in interpreting experimental results under supervision."
-      ]
+      ],
+      "cvOrder": { "industry": 3, "research": 2, "full": 3 }
     },
     {
       "role": "Research Assistant",
@@ -330,7 +390,8 @@
         "Work with the lab's time-series behavioral data, learning how to clean, organize, and explore it.",
         "Read papers and explore possible methods (e.g., multilevel vector autoregression) to understand which approaches might fit the lab's data.",
         "Contribute to discussions by sharing preliminary notes and observations from trial analyses."
-      ]
+      ],
+      "cvOrder": { "industry": 2, "research": 3, "full": 4 }
     },
     {
       "role": "Volunteer Research Assistant",
@@ -340,7 +401,8 @@
       "end": "12/2024",
       "bullets": [
         "Participated in bi-weekly lab meetings, contributing to discussions and staying updated on research progress."
-      ]
+      ],
+      "cvOrder": { "research": 4, "full": 5 }
     },
     {
       "role": "Research Assistant",
@@ -351,11 +413,24 @@
       "bullets": [
         "Assisted with survey design, pilot testing, data coding, and literature reviews in social cognition research.",
         "Participated in lab meetings and contributed to discussions on study design and interpretation."
-      ]
+      ],
+      "cvOrder": { "research": 6, "full": 6 }
     }
   ],
-
   "workExperience": [
+    {
+      "title": "Graduate Course Assistant (Statistical Methods)",
+      "org": "ASU",
+      "location": "Tempe, AZ",
+      "start": "01/2027",
+      "end": "Present",
+      "bullets": [
+        "Grade assignments and exams and give feedback to students.",
+        "Hold office hours and answer student questions about course content.",
+        "Work under the direction of a faculty supervisor."
+      ],
+      "cvOrder": { "industry": 2, "research": 1, "full": 1 }
+    },
     {
       "title": "Research Aide",
       "org": "ASU",
@@ -375,7 +450,8 @@
         "Evaluate AI-generated tags against human annotation standards, analyzing human-AI agreement and error patterns across prompt versions to guide model refinement.",
         "Perform data cleaning tasks, identifying and correcting inconsistencies",
         "Work with databases to structure data and ensure accessibility for future use"
-      ]
+      ],
+      "cvOrder": { "industry": 1, "research": 2, "full": 2 }
     },
     {
       "title": "Lead Survey Assistant",
@@ -394,7 +470,8 @@
         "Assist in the hiring process, including interviewing and evaluating candidates",
         "Perform data cleaning and ensure the integrity of datasets for analysis",
         "Train new student workers in survey procedures and oversee tool calibration"
-      ]
+      ],
+      "cvOrder": { "industry": 3, "research": 3, "full": 3 }
     },
     {
       "title": "Intern",
@@ -405,7 +482,8 @@
       "bullets": [
         "Performed quantitative analysis to support research, program development, and accreditation documentation.",
         "Contributed research-based content on clinical procedures addressing first responders' mental health initiatives."
-      ]
+      ],
+      "cvOrder": { "industry": 4, "research": 4, "full": 4 }
     },
     {
       "title": "Advising Office Aide",
@@ -421,15 +499,18 @@
         "Engaged with students, faculty, and staff through effective communication",
         "Performed administrative tasks including data entry, filing, and calendar management",
         "Worked closely with advising staff to provide exceptional student support"
-      ]
+      ],
+      "cvOrder": { "full": 5 }
     }
   ],
-
   "cvConfig": {
     "industry": {
       "sectionOrder": ["education", "skills", "projects", "researchExperience", "workExperience"]
     },
     "research": {
+      "sectionOrder": ["education", "researchExperience", "projects", "workExperience", "skills"]
+    },
+    "full": {
       "sectionOrder": ["education", "researchExperience", "projects", "workExperience", "skills"]
     }
   }
