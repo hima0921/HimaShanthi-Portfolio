@@ -15,6 +15,7 @@ const template = fs.readFileSync(path.join(ROOT, "templates", "resume-template.t
 const OUTPUT_NAME = {
   industry: "CV_Industry",
   research: "CV_AI_and_Research",
+  full: "CV_Full",
 };
 
 // --- LaTeX escaping -------------------------------------------------------
@@ -45,6 +46,13 @@ function highlights(bullets) {
   );
 }
 
+// Keep only the items that have a cvOrder for this CV, sorted by it.
+function forCv(items, cv) {
+  return items
+    .filter((x) => x.cvOrder && x.cvOrder[cv] !== undefined)
+    .sort((a, b) => a.cvOrder[cv] - b.cvOrder[cv]);
+}
+
 // --- Section builders ------------------------------------------------------
 
 function buildEducation() {
@@ -58,7 +66,7 @@ function buildEducation() {
           const [label, ...rest] = n.split(":");
           return rest.length ? `\\textbf{${esc(label)}:}${esc(rest.join(":"))}` : esc(n);
         })
-        .join(" \\quad ");
+        .join(" \\enspace\\textbar\\enspace ");
       block += `\n\n\\vspace{0.08 cm}\n\\begin{onecolentry}\n    \\begin{highlights}\n        \\item ${noteLine}\n    \\end{highlights}\n\\end{onecolentry}`;
     }
     return block;
@@ -75,9 +83,7 @@ function buildSkills(cv) {
 }
 
 function buildProjects(cv) {
-  const projects = data.projects
-    .filter((p) => p.cvOrder && p.cvOrder[cv] !== undefined)
-    .sort((a, b) => a.cvOrder[cv] - b.cvOrder[cv]);
+  const projects = forCv(data.projects, cv);
 
   const blocks = projects.map((p) => {
     const link = p.resumeLink
@@ -94,8 +100,8 @@ function buildProjects(cv) {
   return `\\section{Projects}\n\n${blocks.join("\n\n\\vspace{0.18 cm}\n\n")}\n\n\\vspace{0.18 cm}\n\n${footer}`;
 }
 
-function buildResearchExperience() {
-  const blocks = data.researchExperience.map((r) => {
+function buildResearchExperience(cv) {
+  const blocks = forCv(data.researchExperience, cv).map((r) => {
     return (
       `\\begin{twocolentry}{\n        ${esc(r.start)} -- ${esc(r.end)}\n    }\n` +
       `    \\textbf{${esc(r.role)}}, \\textit{${esc(r.lab)}}, ${esc(r.org)}\n\\end{twocolentry}\n\n` +
@@ -105,8 +111,8 @@ function buildResearchExperience() {
   return `\\section{Research Experience}\n\n${blocks.join("\n\n\\vspace{0.18 cm}\n\n")}`;
 }
 
-function buildWorkExperience() {
-  const blocks = data.workExperience.map((w) => {
+function buildWorkExperience(cv) {
+  const blocks = forCv(data.workExperience, cv).map((w) => {
     return (
       `\\begin{twocolentry}{\n        ${esc(w.start)} -- ${esc(w.end)}\n    }\n` +
       `    \\textbf{${esc(w.title)}}, ${esc(w.org)} -- ${esc(w.location)}\n\\end{twocolentry}\n\n` +
@@ -120,8 +126,8 @@ const SECTION_BUILDERS = {
   education: () => buildEducation(),
   skills: (cv) => buildSkills(cv),
   projects: (cv) => buildProjects(cv),
-  researchExperience: () => buildResearchExperience(),
-  workExperience: () => buildWorkExperience(),
+  researchExperience: (cv) => buildResearchExperience(cv),
+  workExperience: (cv) => buildWorkExperience(cv),
 };
 
 // --- Build one CV version ---------------------------------------------------
@@ -157,7 +163,8 @@ function buildCv(cv) {
   });
 
   const pdfSrc = path.join(buildDir, `${cv}.pdf`);
-  const pdfDest = path.join(ROOT, "public", `${OUTPUT_NAME[cv]}.pdf`);
+  const outName = OUTPUT_NAME[cv] || `CV_${cv}`;
+  const pdfDest = path.join(ROOT, "public", `${outName}.pdf`);
   fs.copyFileSync(pdfSrc, pdfDest);
   console.log(`✔ Generated ${pdfDest}`);
 }
