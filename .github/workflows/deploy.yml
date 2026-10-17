@@ -3,6 +3,9 @@ name: Deploy Next.js to GitHub Pages
 on:
   push:
     branches: ["main"]
+  workflow_run:
+    workflows: ["Regenerate Resume PDFs"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
