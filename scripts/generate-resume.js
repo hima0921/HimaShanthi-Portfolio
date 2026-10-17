@@ -89,15 +89,23 @@ function buildProjects(cv) {
     const link = p.resumeLink
       ? `\\href{${p.resumeLink.href}}{\\textbf{\\textit{${esc(p.resumeLink.label)}}}}`
       : "";
+    // Optional lines under the title: tools/libraries and methods (for ATS keywords).
+    const metaLines = [];
+    if (p.stack && p.stack.length) metaLines.push(`\\textbf{Tools:} ${p.stack.map(esc).join(", ")}`);
+    if (p.methods && p.methods.length) metaLines.push(`\\textbf{Methods:} ${p.methods.map(esc).join(", ")}`);
+    const stackLine = metaLines.length
+      ? `\\vspace{0.04 cm}\n\\begin{onecolentry}\n    \\small ${metaLines.join(" \\\\\n    ")}\n\\end{onecolentry}\n`
+      : "";
     return (
       `\\begin{twocolentry}{\n    ${link}\n}\n    \\textbf{${esc(p.title)}}\n\\end{twocolentry}\n\n` +
-      `\\vspace{0.10 cm}\n${highlights(p.bullets)}`
+      stackLine +
+      `${stackLine ? "" : "\\vspace{0.10 cm}\n"}${highlights(p.bullets)}`
     );
   });
 
   const footer = `\\vspace{0.10 cm}\n\\begin{onecolentry}\n    \\textit{Additional projects and full write-ups available at} \\href{${data.personal.portfolio}}{my portfolio}.\n\\end{onecolentry}`;
 
-  return `\\section{Projects}\n\n${blocks.join("\n\n\\vspace{0.18 cm}\n\n")}\n\n\\vspace{0.18 cm}\n\n${footer}`;
+  return `\\section{Projects}\n\n${blocks.join("\n\n\\vspace{0.12 cm}\n\n")}\n\n\\vspace{0.12 cm}\n\n${footer}`;
 }
 
 function buildResearchExperience(cv) {
