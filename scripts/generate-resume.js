@@ -6,7 +6,7 @@
 
 const fs = require("fs");
 const path = require("path");
-const { execSync } = require("child_process");
+const { execSync } = require("child_process"); 
 
 const ROOT = path.resolve(__dirname, "..");
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, "resume-data.json"), "utf8"));
