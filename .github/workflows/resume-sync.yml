@@ -1,7 +1,6 @@
 name: Regenerate Resume PDFs
 
-# Runs only when resume-data.json changes, so editing other files
-# (like your portfolio components) won't trigger a pointless rebuild.
+# Runs only when resume-data.json, the template, or the script changes.
 on:
   push:
     branches: [main]
@@ -10,12 +9,22 @@ on:
       - "templates/**"
       - "scripts/generate-resume.js"
 
+permissions:
+  contents: write
+
+# Run one at a time so two quick commits don't push over each other.
+concurrency:
+  group: regenerate-pdfs
+  cancel-in-progress: false
+
 jobs:
   regenerate:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -38,10 +47,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/CV_Industry.pdf public/CV_AI_and_Research.pdf
+          git add public/CV_Industry.pdf public/CV_AI_and_Research.pdf public/CV_Full.pdf
           if git diff --cached --quiet; then
             echo "No PDF changes to commit."
           else
             git commit -m "Auto-regenerate resume PDFs from resume-data.json"
+            git pull --rebase -X theirs origin main
             git push
           fi
