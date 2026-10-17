@@ -120,7 +120,7 @@
     {
       "id": "fairness-llm-bias",
       "title": "Fairness in ML: Detecting Bias in LLM Answers (CSE 575, in progress)",
-      "methods": ["Text classification", "Bias evaluation (BBQ benchmark)", "LLM answer selection"],
+      "methods": ["Text classification", "Bias evaluation"],
       "bullets": [
         "Building a classifier that flags biased answers from an LLM, using the BBQ bias benchmark dataset.",
         "Testing whether the classifier can pick the least biased answer out of several options the LLM gives."
@@ -135,7 +135,7 @@
     {
       "id": "batadal-anomaly-detection",
       "title": "Cyber Attack Detection in Water System Sensor Data (CSE 575, in progress)",
-      "methods": ["Anomaly detection", "Time-series sensor data"],
+      "methods": ["Anomaly detection", "Time series"],
       "bullets": [
         "Group project using the BATADAL water distribution system dataset to detect cyber attacks from sensor readings.",
         "Helping with the project proposal, report, and presentation."
@@ -151,7 +151,7 @@
       "id": "trust-in-advice",
       "title": "Trust in Advice: AI vs. Human Sources (Data Analysis & Written Report)",
       "stack": ["SAS (PROC GLMSELECT, PROC GLM)"],
-      "methods": ["General linear model", "Stepwise selection (AIC)", "Interaction effects", "Residual diagnostics", "Correlation analysis"],
+      "methods": ["General linear model", "Stepwise selection (AIC)", "Residual diagnostics"],
       "bullets": [
         "Analyzed 30,000+ human-AI interactions to study effects of advice source.",
         "Modeled decision changes before and after advice exposure.",
@@ -169,8 +169,8 @@
     {
       "id": "stack-overflow-ai",
       "title": "Analyzing the Impact of AI on Stack Overflow Participation (NLP & Data Analysis)",
-      "stack": ["Python (pandas, NumPy, Matplotlib, Seaborn, statsmodels, SciPy)", "SQL", "Jupyter", "Google Colab"],
-      "methods": ["Time-series analysis", "Statistical comparisons", "Engagement metrics", "NLP"],
+      "stack": ["Python (pandas, NumPy, statsmodels, SciPy, Matplotlib, Seaborn)", "SQL", "Jupyter"],
+      "methods": ["Time-series analysis", "NLP"],
       "bullets": [
         "Analyzed large-scale Stack Overflow data using Python to study changes in user behavior after AI tool releases.",
         "Built time-series datasets and computed engagement metrics (answer rates, response time, retention) using Python.",
@@ -190,7 +190,7 @@
       "id": "baseball-analysis",
       "title": "Predictive Analysis of Team Performance in Baseball using SAS",
       "stack": ["SAS"],
-      "methods": ["Multiple regression", "EDA", "Correlation analysis", "Multicollinearity checks", "Model assumption validation"],
+      "methods": ["Multiple regression", "EDA", "Correlation analysis"],
       "bullets": [
         "Developed a statistical model to predict team wins using historical baseball data.",
         "Conducted EDA and correlation analysis on Minnesota Twins batting records (1998-2024, excluding 2020).",
@@ -218,7 +218,7 @@
       "id": "adp-stock",
       "title": "Predicting Daily Stock Prices of ADP using SAS",
       "stack": ["SAS"],
-      "methods": ["Multiple regression (stepwise, forward, backward)", "Quadratic regression", "EDA", "Correlation analysis"],
+      "methods": ["Multiple regression", "Stepwise selection", "EDA"],
       "bullets": [
         "Created a predictive model for ADP stock prices based on financial indicators.",
         "Applied EDA, correlation analysis, and multiple regression (stepwise, backward, forward selection) to determine significant predictors.",
@@ -246,7 +246,7 @@
       "id": "stochastic-learning-model",
       "title": "Stochastic Dual-Timescale Model of Learning (ODE & SDE Modeling)",
       "stack": ["MATLAB", "R Shiny"],
-      "methods": ["ODE modeling", "SDE modeling", "Stability analysis", "Simulation"],
+      "methods": ["ODE/SDE modeling", "Stability analysis", "Simulation"],
       "bullets": [
         "Developed differential equation model of fast and slow learning processes.",
         "Extended to stochastic framework to examine effects of noise.",
@@ -265,7 +265,7 @@
     {
       "id": "cultural-trust",
       "title": "Cultural Differences in Trust: AI vs. Human Expert Decision-Making",
-      "methods": ["Mixed-effects modeling", "Experimental design", "Pre-registration", "Literature synthesis"],
+      "methods": ["Mixed-effects modeling", "Experimental design", "Pre-registration"],
       "bullets": [
         "Proposed cross-cultural study (Mexico vs. U.S.) on AI vs. human decision-making under conflict.",
         "Outlined experimental design focusing on competence and legitimacy.",
@@ -286,7 +286,7 @@
       "id": "reward-learning",
       "title": "Probabilistic Reward Learning Task using PsychoPy",
       "stack": ["PsychoPy", "Python (pandas, NumPy)"],
-      "methods": ["Experimental design", "Learning under uncertainty", "Behavioral data analysis"],
+      "methods": ["Experimental design", "Learning under uncertainty"],
       "bullets": [
         "Designed probabilistic reward-learning task with informative vs. non-informative features.",
         "Examined learning under uncertainty and perceptual noise.",
