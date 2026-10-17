@@ -87,9 +87,9 @@
       "cvOrder": { "industry": 1, "research": 1, "full": 1 }
     },
     {
-      "category": "Machine Learning & NLP (Foundational)",
-      "items": ["Principal Component Analysis (PCA)", "Neural network basics", "Supervised vs. Unsupervised learning", "Model evaluation concepts", "Introductory text analysis (Voyant Tools)"],
-      "portfolioItems": ["PCA", "Neural network basics", "Supervised vs. Unsupervised learning", "Model Evaluation", "Voyant Tools"],
+      "category": "Machine Learning, NLP & AI Evaluation",
+      "items": ["scikit-learn", "Classification (logistic regression, random forest, SVM)", "Clustering", "Dimensionality reduction (PCA)", "Neural networks (fundamentals)", "Feature engineering", "Hyperparameter tuning", "Cross-validation", "Model evaluation (precision/recall/F1, ROC-AUC)", "Text classification", "Basic NLP", "LLM output evaluation", "Human-AI agreement analysis", "Bias and fairness evaluation", "Anomaly detection", "Time-series analysis"],
+      "portfolioItems": ["scikit-learn", "Classification", "Logistic Regression", "Random Forest", "SVM", "Clustering", "PCA", "Neural Networks", "Feature Engineering", "Hyperparameter Tuning", "Cross-Validation", "Precision/Recall/F1", "ROC-AUC", "Text Classification", "Basic NLP", "LLM Evaluation", "Human-AI Agreement", "Fairness Evaluation", "Anomaly Detection", "Time Series"],
       "portfolioColor": "bg-rose-50 text-rose-700 border-rose-200",
       "cvOrder": { "industry": 2, "research": 2, "full": 2 }
     },
@@ -452,7 +452,7 @@
       "title": "Graduate Course Assistant (Statistical Methods)",
       "org": "ASU",
       "location": "Tempe, AZ",
-      "start": "01/2027",
+      "start": "10/2026",
       "end": "Present",
       "bullets": [
         "Grade assignments and exams and give feedback to students.",
