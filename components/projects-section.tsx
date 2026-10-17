@@ -21,34 +21,19 @@ type Project = {
   links?: ProjectLink[]
 }
 
-// Preserve the exact display order the portfolio previously used
-const PORTFOLIO_ORDER = [
-  "fairness-llm-bias",
-  "batadal-anomaly-detection",
-  "stack-overflow-ai",
-  "stochastic-learning-model",
-  "cultural-trust",
-  "reward-learning",
-  "trust-in-advice",
-  "mirror-neurons",
-  "ancova-presentation",
-  "sleep-caffeine-study",
-  "baseball-analysis",
-  "adp-stock",
-]
-
-const projects: Project[] = PORTFOLIO_ORDER.map((id) => {
-  const p = resumeData.projects.find((proj) => proj.id === id)!
-  return {
+// Shows every project that has portfolio info, ordered by "portfolioOrder" in resume-data.json
+const projects: Project[] = resumeData.projects
+  .filter((p) => p.portfolioMeta && p.portfolioCategory)
+  .sort((a, b) => (a.portfolioOrder ?? 999) - (b.portfolioOrder ?? 999))
+  .map((p) => ({
     title: p.title,
-    meta: p.portfolioMeta,
+    meta: p.portfolioMeta ?? "",
     inst: p.portfolioInst,
     bullets: p.portfolioBullets ?? p.bullets,
-    tags: p.portfolioTags,
-    category: p.portfolioCategory,
+    tags: p.portfolioTags ?? [],
+    category: p.portfolioCategory ?? "ai",
     links: p.links,
-  }
-})
+  }))
 
 export function ProjectsSection() {
   return (
