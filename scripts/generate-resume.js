@@ -6,7 +6,7 @@
 
 const fs = require("fs");
 const path = require("path");
-const { execSync } = require("child_process"); 
+const { execSync } = require("child_process");
 
 const ROOT = path.resolve(__dirname, "..");
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, "resume-data.json"), "utf8"));
@@ -89,12 +89,12 @@ function buildProjects(cv) {
     const link = p.resumeLink
       ? `\\href{${p.resumeLink.href}}{\\textbf{\\textit{${esc(p.resumeLink.label)}}}}`
       : "";
-    // Optional lines under the title: tools/libraries and methods (for ATS keywords).
-    const metaLines = [];
-    if (p.stack && p.stack.length) metaLines.push(`\\textbf{Tools:} ${p.stack.map(esc).join(", ")}`);
-    if (p.methods && p.methods.length) metaLines.push(`\\textbf{Methods:} ${p.methods.map(esc).join(", ")}`);
-    const stackLine = metaLines.length
-      ? `\\vspace{0.04 cm}\n\\begin{onecolentry}\n    \\small ${metaLines.join(" \\\\\n    ")}\n\\end{onecolentry}\n`
+    // One compact line under the title: tools/libraries, then key methods (for ATS keywords).
+    const parts = [];
+    if (p.stack && p.stack.length) parts.push(`\\textbf{Tools:} ${p.stack.map(esc).join(", ")}`);
+    if (p.methods && p.methods.length) parts.push(`\\textbf{Methods:} ${p.methods.map(esc).join(", ")}`);
+    const stackLine = parts.length
+      ? `\\vspace{0.03 cm}\n\\begin{onecolentry}\n    \\footnotesize ${parts.join(" \\enspace$\\cdot$\\enspace ")}\n\\end{onecolentry}\n`
       : "";
     return (
       `\\begin{twocolentry}{\n    ${link}\n}\n    \\textbf{${esc(p.title)}}\n\\end{twocolentry}\n\n` +
