@@ -120,6 +120,7 @@
     {
       "id": "fairness-llm-bias",
       "title": "Fairness in ML: Detecting Bias in LLM Answers (CSE 575, in progress)",
+      "methods": ["Text classification", "Bias evaluation (BBQ benchmark)", "LLM answer selection"],
       "bullets": [
         "Building a classifier that flags biased answers from an LLM, using the BBQ bias benchmark dataset.",
         "Testing whether the classifier can pick the least biased answer out of several options the LLM gives."
@@ -127,13 +128,14 @@
       "portfolioMeta": "In progress · Class Project",
       "portfolioInst": "Arizona State University",
       "portfolioCategory": "ai",
-      "portfolioTags": ["Fairness in ML", "LLMs"],
+      "portfolioTags": ["Fairness in ML", "LLM Bias", "BBQ Benchmark", "Text Classification"],
       "links": [],
       "cvOrder": { "industry": 3, "research": 6, "full": 4 }
     },
     {
       "id": "batadal-anomaly-detection",
       "title": "Cyber Attack Detection in Water System Sensor Data (CSE 575, in progress)",
+      "methods": ["Anomaly detection", "Time-series sensor data"],
       "bullets": [
         "Group project using the BATADAL water distribution system dataset to detect cyber attacks from sensor readings.",
         "Helping with the project proposal, report, and presentation."
@@ -141,13 +143,15 @@
       "portfolioMeta": "In progress · Class Project",
       "portfolioInst": "Arizona State University",
       "portfolioCategory": "ai",
-      "portfolioTags": ["Anomaly Detection", "Time Series"],
+      "portfolioTags": ["Anomaly Detection", "Time Series", "Cybersecurity", "Water Systems"],
       "links": [],
-      "cvOrder": { "industry": 6, "full": 9 }
+      "cvOrder": { "industry": 5, "full": 9 }
     },
     {
       "id": "trust-in-advice",
       "title": "Trust in Advice: AI vs. Human Sources (Data Analysis & Written Report)",
+      "stack": ["SAS (PROC GLMSELECT, PROC GLM)"],
+      "methods": ["General linear model", "Stepwise selection (AIC)", "Interaction effects", "Residual diagnostics", "Correlation analysis"],
       "bullets": [
         "Analyzed 30,000+ human-AI interactions to study effects of advice source.",
         "Modeled decision changes before and after advice exposure.",
@@ -156,7 +160,7 @@
       "resumeLink": { "label": "Trust in AI.com/2025", "href": "https://hima0921.github.io/HimaShanthi-Portfolio/projects/trust-in-advice-report.pdf" },
       "portfolioMeta": "2025",
       "portfolioCategory": "ai",
-      "portfolioTags": ["Human-AI Interaction", "Data Analysis"],
+      "portfolioTags": ["Human-AI Interaction", "SAS", "General Linear Model", "Stepwise Selection", "Data Analysis"],
       "links": [
         { "label": "View Report", "href": "/HimaShanthi-Portfolio/projects/trust-in-advice-report.pdf" }
       ],
@@ -165,6 +169,8 @@
     {
       "id": "stack-overflow-ai",
       "title": "Analyzing the Impact of AI on Stack Overflow Participation (NLP & Data Analysis)",
+      "stack": ["Python (pandas, NumPy, Matplotlib, Seaborn, statsmodels, SciPy)", "SQL", "Jupyter", "Google Colab"],
+      "methods": ["Time-series analysis", "Statistical comparisons", "Engagement metrics", "NLP"],
       "bullets": [
         "Analyzed large-scale Stack Overflow data using Python to study changes in user behavior after AI tool releases.",
         "Built time-series datasets and computed engagement metrics (answer rates, response time, retention) using Python.",
@@ -174,7 +180,7 @@
       "resumeLink": { "label": "GitHub", "href": "https://github.com/hima0921/stack-overflow-ai-project" },
       "portfolioMeta": "2025",
       "portfolioCategory": "ai",
-      "portfolioTags": ["Python", "NLP", "Human-AI Interaction"],
+      "portfolioTags": ["Python", "pandas", "statsmodels", "SQL", "Time Series", "NLP", "Human-AI Interaction"],
       "links": [
         { "label": "View on GitHub", "href": "https://github.com/hima0921/stack-overflow-ai-project" }
       ],
@@ -183,6 +189,8 @@
     {
       "id": "baseball-analysis",
       "title": "Predictive Analysis of Team Performance in Baseball using SAS",
+      "stack": ["SAS"],
+      "methods": ["Multiple regression", "EDA", "Correlation analysis", "Multicollinearity checks", "Model assumption validation"],
       "bullets": [
         "Developed a statistical model to predict team wins using historical baseball data.",
         "Conducted EDA and correlation analysis on Minnesota Twins batting records (1998-2024, excluding 2020).",
@@ -200,7 +208,7 @@
       "portfolioMeta": "Fall 2024 · Class Project",
       "portfolioInst": "Arizona State University",
       "portfolioCategory": "stats",
-      "portfolioTags": ["SAS", "Regression", "Sports Analytics"],
+      "portfolioTags": ["SAS", "Multiple Regression", "EDA", "Sports Analytics"],
       "links": [
         { "label": "View Report", "href": "/HimaShanthi-Portfolio/projects/baseball-performance-analysis.pdf" }
       ],
@@ -209,6 +217,8 @@
     {
       "id": "adp-stock",
       "title": "Predicting Daily Stock Prices of ADP using SAS",
+      "stack": ["SAS"],
+      "methods": ["Multiple regression (stepwise, forward, backward)", "Quadratic regression", "EDA", "Correlation analysis"],
       "bullets": [
         "Created a predictive model for ADP stock prices based on financial indicators.",
         "Applied EDA, correlation analysis, and multiple regression (stepwise, backward, forward selection) to determine significant predictors.",
@@ -226,15 +236,17 @@
       "portfolioMeta": "Fall 2024 · Class Project",
       "portfolioInst": "Arizona State University",
       "portfolioCategory": "stats",
-      "portfolioTags": ["SAS", "Regression", "Finance"],
+      "portfolioTags": ["SAS", "Multiple Regression", "Stepwise Selection", "Finance"],
       "links": [
         { "label": "View Report", "href": "/HimaShanthi-Portfolio/projects/adp-stock-prediction.pdf" }
       ],
-      "cvOrder": { "industry": 5, "full": 8 }
+      "cvOrder": { "full": 8 }
     },
     {
       "id": "stochastic-learning-model",
       "title": "Stochastic Dual-Timescale Model of Learning (ODE & SDE Modeling)",
+      "stack": ["MATLAB", "R Shiny"],
+      "methods": ["ODE modeling", "SDE modeling", "Stability analysis", "Simulation"],
       "bullets": [
         "Developed differential equation model of fast and slow learning processes.",
         "Extended to stochastic framework to examine effects of noise.",
@@ -244,7 +256,7 @@
       "resumeLink": { "label": "Final Project / 2025", "href": "https://github.com/hima0921/stochastic-dual-timescale-learning-model" },
       "portfolioMeta": "Final Project · 2025",
       "portfolioCategory": "cognitive",
-      "portfolioTags": ["ODE/SDE", "Cognitive Modeling"],
+      "portfolioTags": ["MATLAB", "R Shiny", "ODE/SDE Modeling", "Cognitive Modeling", "Simulation"],
       "links": [
         { "label": "View on GitHub", "href": "https://github.com/hima0921/stochastic-dual-timescale-learning-model" }
       ],
@@ -253,6 +265,7 @@
     {
       "id": "cultural-trust",
       "title": "Cultural Differences in Trust: AI vs. Human Expert Decision-Making",
+      "methods": ["Mixed-effects modeling", "Experimental design", "Pre-registration", "Literature synthesis"],
       "bullets": [
         "Proposed cross-cultural study (Mexico vs. U.S.) on AI vs. human decision-making under conflict.",
         "Outlined experimental design focusing on competence and legitimacy.",
@@ -262,7 +275,7 @@
       "resumeLink": { "label": "Research Proposal / 2025", "href": "https://hima0921.github.io/HimaShanthi-Portfolio/projects/cultural-trust-presentation.html" },
       "portfolioMeta": "Research Proposal · 2025",
       "portfolioCategory": "ai",
-      "portfolioTags": ["Cross-Cultural", "Human-AI Interaction"],
+      "portfolioTags": ["Cross-Cultural", "Human-AI Interaction", "Mixed-Effects Models", "Pre-registration"],
       "links": [
         { "label": "View Presentation", "href": "/HimaShanthi-Portfolio/projects/cultural-trust-presentation.html" },
         { "label": "View Pre-Registration", "href": "/HimaShanthi-Portfolio/projects/cultural-trust-preregistration.pdf" }
@@ -272,6 +285,8 @@
     {
       "id": "reward-learning",
       "title": "Probabilistic Reward Learning Task using PsychoPy",
+      "stack": ["PsychoPy", "Python (pandas, NumPy)"],
+      "methods": ["Experimental design", "Learning under uncertainty", "Behavioral data analysis"],
       "bullets": [
         "Designed probabilistic reward-learning task with informative vs. non-informative features.",
         "Examined learning under uncertainty and perceptual noise.",
@@ -280,7 +295,7 @@
       "resumeLink": { "label": "Reward Learning.com/2025", "href": "https://hima0921.github.io/HimaShanthi-Portfolio/projects/reward-learning-presentation.pdf" },
       "portfolioMeta": "2025",
       "portfolioCategory": "cognitive",
-      "portfolioTags": ["PsychoPy", "Cognitive Modeling"],
+      "portfolioTags": ["PsychoPy", "Python", "pandas", "NumPy", "Experimental Design", "Cognitive Modeling"],
       "links": [
         { "label": "View Presentation", "href": "/HimaShanthi-Portfolio/projects/reward-learning-presentation.pdf" },
         { "label": "Download Task File", "href": "/HimaShanthi-Portfolio/projects/reward-learning-task.psyexp" }
@@ -297,7 +312,7 @@
       "resumeLink": { "label": "Proposal.com/2025", "href": "https://hima0921.github.io/HimaShanthi-Portfolio/projects/mirror-neurons-proposal.pdf" },
       "portfolioMeta": "2025",
       "portfolioCategory": "cognitive",
-      "portfolioTags": ["Cognitive Science", "Research Proposal"],
+      "portfolioTags": ["Cognitive Science", "Research Proposal", "Mirror Neurons", "Social Synchrony"],
       "links": [
         { "label": "View Proposal", "href": "/HimaShanthi-Portfolio/projects/mirror-neurons-proposal.pdf" }
       ],
@@ -315,7 +330,7 @@
       "portfolioMeta": "Spring 2024 · Class Project",
       "portfolioInst": "Arizona State University",
       "portfolioCategory": "stats",
-      "portfolioTags": ["Statistics", "R"],
+      "portfolioTags": ["R", "ANCOVA", "Statistics", "Slidy"],
       "links": [
         { "label": "View Presentation", "href": "/HimaShanthi-Portfolio/projects/ancova-presentation.html" }
       ]
@@ -334,7 +349,7 @@
       "portfolioMeta": "Spring 2024 · Class Project",
       "portfolioInst": "Arizona State University",
       "portfolioCategory": "stats",
-      "portfolioTags": ["Survey Research", "ANOVA", "JASP"],
+      "portfolioTags": ["Survey Research", "ANOVA", "JASP", "G*Power", "Excel"],
       "links": [
         { "label": "View Paper", "href": "/HimaShanthi-Portfolio/projects/sleep-caffeine-study.pdf" }
       ]
