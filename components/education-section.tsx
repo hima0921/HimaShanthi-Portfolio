@@ -3,7 +3,7 @@ import resumeData from "@/resume-data.json"
 export function EducationSection() {
   const [msDegree, bsDegree] = resumeData.education
   const bsExtras = bsDegree.portfolioExtras
-  const { scholarships, coursework } = resumeData.portfolioExtras
+  const { scholarships, programs, coursework } = resumeData.portfolioExtras
   const courseworkColumns: { label: string; color: string }[] = [
     { label: "Statistics & Quantitative Methods", color: "text-blue-700" },
     { label: "Cognitive Science & Psychology", color: "text-yellow-700" },
@@ -94,6 +94,16 @@ export function EducationSection() {
                   <span key={i} className="text-sm px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">{s}</span>
                 ))}
               </div>
+                          {programs.length > 0 && (
+                <>
+                  <h3 className="text-lg font-bold mt-6 mb-4 text-black dark:text-white">Programs</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {programs.map((p, i) => (
+                      <span key={i} className="text-sm px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">{p}</span>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           </div>
 
