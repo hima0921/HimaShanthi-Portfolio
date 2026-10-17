@@ -42,6 +42,9 @@
       "New American University Scholarship",
       "Andre Levard Mackey Scholarship"
     ],
+    "programs": [
+      "ASU AI Scholars Program, 2026–27"
+    ],
     "coursework": {
       "Statistics & Quantitative Methods": [
         "STP 420 - Introductory Applied Statistics",
@@ -119,6 +122,7 @@
   "projects": [
     {
       "id": "fairness-llm-bias",
+      "portfolioOrder": 1,
       "title": "Fairness in ML: Detecting Bias in LLM Answers (CSE 575, in progress)",
       "methods": ["Text classification", "Bias evaluation"],
       "bullets": [
@@ -134,6 +138,7 @@
     },
     {
       "id": "batadal-anomaly-detection",
+      "portfolioOrder": 2,
       "title": "Cyber Attack Detection in Water System Sensor Data (CSE 575, in progress)",
       "methods": ["Anomaly detection", "Time series"],
       "bullets": [
@@ -149,6 +154,7 @@
     },
     {
       "id": "trust-in-advice",
+      "portfolioOrder": 7,
       "title": "Trust in Advice: AI vs. Human Sources (Data Analysis & Written Report)",
       "stack": ["SAS (PROC GLMSELECT, PROC GLM)"],
       "methods": ["General linear model", "Stepwise selection (AIC)", "Residual diagnostics"],
@@ -168,6 +174,7 @@
     },
     {
       "id": "stack-overflow-ai",
+      "portfolioOrder": 3,
       "title": "Analyzing the Impact of AI on Stack Overflow Participation (NLP & Data Analysis)",
       "stack": ["Python (pandas, NumPy, statsmodels, SciPy, Matplotlib, Seaborn)", "SQL", "Jupyter"],
       "methods": ["Time-series analysis", "NLP"],
@@ -188,6 +195,7 @@
     },
     {
       "id": "baseball-analysis",
+      "portfolioOrder": 11,
       "title": "Predictive Analysis of Team Performance in Baseball using SAS",
       "stack": ["SAS"],
       "methods": ["Multiple regression", "EDA", "Correlation analysis"],
@@ -216,6 +224,7 @@
     },
     {
       "id": "adp-stock",
+      "portfolioOrder": 12,
       "title": "Predicting Daily Stock Prices of ADP using SAS",
       "stack": ["SAS"],
       "methods": ["Multiple regression", "Stepwise selection", "EDA"],
@@ -244,6 +253,7 @@
     },
     {
       "id": "stochastic-learning-model",
+      "portfolioOrder": 4,
       "title": "Stochastic Dual-Timescale Model of Learning (ODE & SDE Modeling)",
       "stack": ["MATLAB", "R Shiny"],
       "methods": ["ODE/SDE modeling", "Stability analysis", "Simulation"],
@@ -264,6 +274,7 @@
     },
     {
       "id": "cultural-trust",
+      "portfolioOrder": 5,
       "title": "Cultural Differences in Trust: AI vs. Human Expert Decision-Making",
       "methods": ["Mixed-effects modeling", "Experimental design", "Pre-registration"],
       "bullets": [
@@ -284,6 +295,7 @@
     },
     {
       "id": "reward-learning",
+      "portfolioOrder": 6,
       "title": "Probabilistic Reward Learning Task using PsychoPy",
       "stack": ["PsychoPy", "Python (pandas, NumPy)"],
       "methods": ["Experimental design", "Learning under uncertainty"],
@@ -304,6 +316,7 @@
     },
     {
       "id": "mirror-neurons",
+      "portfolioOrder": 8,
       "title": "Research Proposal: Mirror Neurons, Social Synchrony, and Collaborative Learning",
       "bullets": [
         "Proposed a research framework synthesizing human and animal literature on mirror neuron systems and social synchrony.",
@@ -320,6 +333,7 @@
     },
     {
       "id": "ancova-presentation",
+      "portfolioOrder": 9,
       "title": "ANCOVA Presentation",
       "onPortfolioOnly": true,
       "bullets": [
@@ -337,6 +351,7 @@
     },
     {
       "id": "sleep-caffeine-study",
+      "portfolioOrder": 10,
       "title": "The Relationship Between University Students' Sleep and Caffeine Intake (Correlational Study)",
       "onPortfolioOnly": true,
       "bullets": [
@@ -437,7 +452,7 @@
       "title": "Graduate Course Assistant (Statistical Methods)",
       "org": "ASU",
       "location": "Tempe, AZ",
-      "start": "10/2026",
+      "start": "01/2027",
       "end": "Present",
       "bullets": [
         "Grade assignments and exams and give feedback to students.",
