@@ -23,6 +23,8 @@ type Project = {
 
 // Preserve the exact display order the portfolio previously used
 const PORTFOLIO_ORDER = [
+  "fairness-llm-bias",
+  "batadal-anomaly-detection",
   "stack-overflow-ai",
   "stochastic-learning-model",
   "cultural-trust",
