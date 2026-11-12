@@ -53,6 +53,37 @@ function forCv(items, cv) {
     .sort((a, b) => a.cvOrder[cv] - b.cvOrder[cv]);
 }
 
+// Any entry (project or role) can give a shorter bullet list for one CV with
+// "cvBullets": { "industry": [...] }. Otherwise it uses its normal "bullets".
+function bulletsFor(item, cv) {
+  return (item.cvBullets && item.cvBullets[cv]) || item.bullets;
+}
+
+// Roles: current ones first, then ended ones by end date, newest first.
+// (cvOrder still decides which roles appear in which CV.)
+function monthKey(d) {
+  if (!d || d === "Present") return Infinity;
+  const [m, y] = d.split("/").map(Number);
+  return y * 12 + m;
+}
+function byRecency(items) {
+  return [...items].sort(
+    (a, b) => monthKey(b.end) - monthKey(a.end) || monthKey(b.start) - monthKey(a.start)
+  );
+}
+
+// --- Keeping entries together ----------------------------------------------
+// Each entry is wrapped in the template's "keeptogether" environment, which
+// forbids page breaks inside it. A title is never split from its bullets, and
+// the section heading already stays with the first entry (titlesec adds no
+// break after a heading).
+function keepTogether(body) {
+  return "\\begin{keeptogether}\n" + body + "\n\\end{keeptogether}";
+}
+function sectionWithEntries(name, blocks, gap) {
+  return "\\section{" + name + "}\n\n" + blocks.map(keepTogether).join("\n\n\\vspace{" + gap + "}\n\n");
+}
+
 // --- Section builders ------------------------------------------------------
 
 function buildEducation() {
@@ -75,7 +106,8 @@ function buildEducation() {
 }
 
 function buildSkills(cv) {
-  const cats = [...data.skills].sort((a, b) => a.cvOrder[cv] - b.cvOrder[cv]);
+  // Skill groups without a cvOrder for this CV are left out (same rule as other sections).
+  const cats = forCv(data.skills, cv);
   const items = cats
     .map((c) => `        \\item \\textbf{${esc(c.category)}:} ${c.items.map(esc).join(", ")}`)
     .join("\n");
@@ -86,6 +118,8 @@ function buildProjects(cv) {
   const projects = forCv(data.projects, cv);
 
   const blocks = projects.map((p) => {
+    // A project can give a different bullet list per CV with "cvBullets".
+    const bullets = bulletsFor(p, cv);
     const link = p.resumeLink
       ? `\\href{${p.resumeLink.href}}{\\textbf{\\textit{${esc(p.resumeLink.label)}}}}`
       : "";
@@ -99,36 +133,35 @@ function buildProjects(cv) {
     return (
       `\\begin{twocolentry}{\n    ${link}\n}\n    \\textbf{${esc(p.title)}}\n\\end{twocolentry}\n\n` +
       stackLine +
-      // A project can give a different bullet list per CV with "cvBullets".
-      `${stackLine ? "" : "\\vspace{0.10 cm}\n"}${highlights((p.cvBullets && p.cvBullets[cv]) || p.bullets)}`
+      `${stackLine ? "" : "\\vspace{0.10 cm}\n"}${highlights(bullets)}`
     );
   });
 
   const footer = `\\vspace{0.10 cm}\n\\begin{onecolentry}\n    \\textit{Additional projects and full write-ups available at} \\href{${data.personal.portfolio}}{my portfolio}.\n\\end{onecolentry}`;
 
-  return `\\section{Projects}\n\n${blocks.join("\n\n\\vspace{0.12 cm}\n\n")}\n\n\\vspace{0.12 cm}\n\n${footer}`;
+  return `${sectionWithEntries("Projects", blocks, "0.12 cm")}\n\n\\vspace{0.12 cm}\n\n${footer}`;
 }
 
 function buildResearchExperience(cv) {
-  const blocks = forCv(data.researchExperience, cv).map((r) => {
+  const blocks = byRecency(forCv(data.researchExperience, cv)).map((r) => {
     return (
       `\\begin{twocolentry}{\n        ${esc(r.start)} -- ${esc(r.end)}\n    }\n` +
       `    \\textbf{${esc(r.role)}}, \\textit{${esc(r.lab)}}, ${esc(r.org)}\n\\end{twocolentry}\n\n` +
-      `\\vspace{0.10 cm}\n${highlights(r.bullets)}`
+      `\\vspace{0.10 cm}\n${highlights(bulletsFor(r, cv))}`
     );
   });
-  return `\\section{Research Experience}\n\n${blocks.join("\n\n\\vspace{0.18 cm}\n\n")}`;
+  return sectionWithEntries("Research Experience", blocks, "0.18 cm");
 }
 
 function buildWorkExperience(cv) {
-  const blocks = forCv(data.workExperience, cv).map((w) => {
+  const blocks = byRecency(forCv(data.workExperience, cv)).map((w) => {
     return (
       `\\begin{twocolentry}{\n        ${esc(w.start)} -- ${esc(w.end)}\n    }\n` +
       `    \\textbf{${esc(w.title)}}, ${esc(w.org)} -- ${esc(w.location)}\n\\end{twocolentry}\n\n` +
-      `\\vspace{0.10 cm}\n${highlights(w.bullets)}`
+      `\\vspace{0.10 cm}\n${highlights(bulletsFor(w, cv))}`
     );
   });
-  return `\\section{Work Experience}\n\n${blocks.join("\n\n\\vspace{0.18 cm}\n\n")}`;
+  return sectionWithEntries("Work Experience", blocks, "0.18 cm");
 }
 
 const SECTION_BUILDERS = {

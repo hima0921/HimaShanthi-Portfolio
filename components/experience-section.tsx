@@ -1,7 +1,8 @@
 import resumeData from "@/resume-data.json"
+import { byRecency } from "@/lib/role-order"
 
 export function ExperienceSection() {
-  const jobs = resumeData.workExperience.map((job) => ({
+  const jobs = byRecency(resumeData.workExperience).map((job) => ({
     title: job.title,
     company: `${job.org}, ${job.location}`,
     period: `${job.start} - ${job.end}`,

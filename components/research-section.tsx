@@ -1,7 +1,8 @@
 import resumeData from "@/resume-data.json"
+import { byRecency } from "@/lib/role-order"
 
 export function ResearchSection() {
-  const research = resumeData.researchExperience.map((r) => ({
+  const research = byRecency(resumeData.researchExperience).map((r) => ({
     title: r.role,
     period: `${r.start} – ${r.end}`,
     inst: r.lab,

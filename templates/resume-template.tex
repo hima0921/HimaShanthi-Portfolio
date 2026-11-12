@@ -86,6 +86,19 @@
     \end{adjustwidth}
 }
 
+% Keeps one whole entry (title, tools line, bullets) on the same page.
+% Inside it every page break is forbidden, so LaTeX can only break between
+% entries: if an entry doesn't fit, all of it moves to the next page.
+\makeatletter
+\newenvironment{keeptogether}{
+    \par
+    \interlinepenalty=10000 \clubpenalty=10000 \widowpenalty=10000
+    \@beginparpenalty=10000 \@itempenalty=10000 \@endparpenalty=10000
+}{
+    \par
+}
+\makeatother
+
 \newenvironment{twocolentry}[2][]{
     \onecolentry
     \def\secondColumn{#2}

@@ -127,7 +127,7 @@
       "items": ["Slack", "Teams", "Zoom", "Word", "Outlook", "Adobe PowerPoint", "OneDrive", "Dropbox"],
       "portfolioItems": ["Slack", "Teams", "Zoom", "Word", "PowerPoint", "OneDrive", "Dropbox"],
       "portfolioColor": "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600",
-      "cvOrder": { "industry": 7, "research": 7, "full": 7 }
+      "cvOrder": { "industry": 7, "full": 7 }
     }
   ],
   "projects": [
@@ -151,7 +151,6 @@
         "industry": [
           "Led user research with partner First Place AZ (a site visit and 2 staff meetings), and turned the findings into design changes, including always-visible safety cautions and adaptive help per step.",
           "Built a Python module that detects where users get stuck (4 patterns) from interaction logs, requiring patterns to repeat before acting, to avoid false alarms.",
-          "Wrote 4 task analyses and 10 skill cards grounded in research and USDA/FDA safety guidance, and built the Demo page's “Why this changed” explanations and “Help over time” grid.",
           "Co-built a working prototype with simulated data (React, FastAPI, an LLM with code-based safety rules, and automated tests) on a 5-person team, and presented it at the Scottsdale Launchpad."
         ],
         "research": [
@@ -255,7 +254,14 @@
       "links": [
         { "label": "View on GitHub", "href": "https://github.com/hima0921/stack-overflow-ai-project" }
       ],
-      "cvOrder": { "industry": 2, "research": 5, "full": 3 }
+      "cvBullets": {
+        "industry": [
+          "Analyzed large-scale Stack Overflow data using Python to study changes in user behavior after AI tool releases.",
+          "Built time-series datasets and computed engagement metrics (answer rates, response time, retention) using Python.",
+          "Explored tag-based trends and basic NLP features to examine topic shifts."
+        ]
+      },
+      "cvOrder": { "industry": 2, "full": 3 }
     },
     {
       "id": "baseball-analysis",
@@ -285,7 +291,7 @@
       "links": [
         { "label": "View Report", "href": "/HimaShanthi-Portfolio/projects/baseball-performance-analysis.pdf" }
       ],
-      "cvOrder": { "industry": 5, "full": 8 }
+      "cvOrder": { "full": 8 }
     },
     {
       "id": "adp-stock",
@@ -399,7 +405,7 @@
       "links": [
         { "label": "View Proposal", "href": "/HimaShanthi-Portfolio/projects/mirror-neurons-proposal.pdf" }
       ],
-      "cvOrder": { "research": 8, "full": 11 }
+      "cvOrder": { "full": 11 }
     },
     {
       "id": "ancova-presentation",
@@ -540,14 +546,14 @@
       "bullets": [
         "Review, categorize, and structure user-generated data to ensure quality and consistency.",
         "Assign relevant tags to comments for improved organization and searchability.",
-        "Evaluate AI-generated tags against human annotation standards, analyzing human-AI agreement and error patterns across prompt versions to guide model refinement.",
+        "Check whether AI-generated tags follow the evaluation guidelines and are accurate.",
         "Perform data cleaning tasks, identifying and correcting inconsistencies to maintain data accuracy.",
         "Work with databases to structure data and ensure accessibility for future use."
       ],
       "portfolioBullets": [
         "Review and categorize user comments to ensure adherence to quality standards",
         "Assign relevant tags to comments for improved organization and searchability",
-        "Evaluate AI-generated tags against human annotation standards, analyzing human-AI agreement and error patterns across prompt versions to guide model refinement.",
+        "Check whether AI-generated tags follow the evaluation guidelines and are accurate.",
         "Perform data cleaning tasks, identifying and correcting inconsistencies",
         "Work with databases to structure data and ensure accessibility for future use"
       ],
@@ -571,7 +577,13 @@
         "Performed data cleaning and ensured the integrity of datasets for analysis",
         "Trained new student workers in survey procedures and oversaw tool calibration"
       ],
-      "cvOrder": { "industry": 3, "research": 3, "full": 3 }
+      "cvBullets": {
+        "industry": [
+          "Conducted phone-based survey interviews with currently employed and recently graduated ASU students, ensuring accurate and complete data collection by clarifying responses and addressing any ambiguities.",
+          "Trained new student workers in survey procedures and oversaw testing and calibration of survey tools."
+        ]
+      },
+      "cvOrder": { "industry": 3, "full": 3 }
     },
     {
       "title": "Intern",
@@ -583,7 +595,7 @@
         "Performed quantitative analysis to support research, program development, and accreditation documentation.",
         "Contributed research-based content on clinical procedures addressing first responders' mental health initiatives."
       ],
-      "cvOrder": { "industry": 4, "research": 4, "full": 4 }
+      "cvOrder": { "industry": 4, "full": 4 }
     },
     {
       "title": "Advising Office Aide",
