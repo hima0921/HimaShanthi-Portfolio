@@ -7,6 +7,8 @@ export function SkillsSection() {
       category: cat.category,
       skills: cat.portfolioItems ?? cat.items,
       color: cat.portfolioColor,
+      // Small rows under the main chips, e.g. "Python libraries" (website only).
+      subgroups: (cat.portfolioSubgroups ?? []) as { label: string; items: string[] }[],
     }))
 
   return (
@@ -32,6 +34,20 @@ export function SkillsSection() {
                   </span>
                 ))}
               </div>
+              {cat.subgroups.map((sub) => (
+                <div key={sub.label} className="mt-4 pl-3 border-l-2 border-gray-200 dark:border-gray-700">
+                  <p className="text-[11px] font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+                    {sub.label}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {sub.items.map((item) => (
+                      <span key={item} className={`text-xs font-medium px-2.5 py-1 rounded-full border ${cat.color}`}>
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           ))}
         </div>

@@ -46,6 +46,10 @@
       "ASU AI Scholars Program, 2026–27"
     ],
     "coursework": {
+      "Graduate (Fall 2026)": [
+        "CSE 575 - Statistical Machine Learning",
+        "CSE 511 - Data Processing at Scale"
+      ],
       "Statistics & Quantitative Methods": [
         "STP 420 - Introductory Applied Statistics",
         "STP 421 - Probability",
@@ -81,80 +85,138 @@
   "skills": [
     {
       "category": "Programming & Statistical Tools",
-      "items": ["R", "SAS", "MATLAB", "Python", "JMP", "JASP", "SQL (Microsoft Access)", "Java", "C", "Bash", "REST APIs"],
+      "items": ["R", "SAS", "MATLAB", "Python (pandas, NumPy, statsmodels, scikit-learn, Matplotlib)", "JMP", "JASP", "SQL (Microsoft Access)", "Java", "C", "Bash", "REST APIs"],
       "portfolioItems": ["R", "SAS", "MATLAB", "Python", "JMP", "JASP", "SQL", "Java", "C", "Bash", "REST APIs"],
       "portfolioColor": "bg-blue-50 text-blue-700 border-blue-200",
+      "portfolioSubgroups": [{ "label": "Python libraries", "items": ["pandas", "NumPy", "statsmodels", "Matplotlib"] }],
       "cvOrder": { "industry": 1, "research": 1, "full": 1 }
     },
     {
       "category": "Machine Learning, NLP & AI Evaluation",
-      "items": ["scikit-learn", "Classification (logistic regression, random forest, SVM)", "Clustering", "Dimensionality reduction (PCA)", "Neural networks (fundamentals)", "Feature engineering", "Hyperparameter tuning", "Cross-validation", "Model evaluation (precision/recall/F1, ROC-AUC)", "Text classification", "Basic NLP", "LLM output evaluation", "Human-AI agreement analysis", "Bias and fairness evaluation", "Anomaly detection", "Time-series analysis"],
-      "portfolioItems": ["scikit-learn", "Classification", "Logistic Regression", "Random Forest", "SVM", "Clustering", "PCA", "Neural Networks", "Feature Engineering", "Hyperparameter Tuning", "Cross-Validation", "Precision/Recall/F1", "ROC-AUC", "Text Classification", "Basic NLP", "LLM Evaluation", "Human-AI Agreement", "Fairness Evaluation", "Anomaly Detection", "Time Series"],
+      "items": ["scikit-learn", "Classification (logistic regression, random forest, SVM)", "Ridge regression", "Clustering", "Dimensionality reduction (PCA)", "Neural networks (fundamentals)", "Feature engineering", "Hyperparameter tuning", "Cross-validation", "Model evaluation (precision/recall/F1, ROC-AUC)", "Text classification", "Basic NLP", "LLM output evaluation", "Human-AI agreement analysis", "Bias and fairness evaluation", "Anomaly detection", "Time-series analysis"],
+      "portfolioItems": ["scikit-learn", "Classification", "Logistic Regression", "Random Forest", "SVM", "Ridge Regression", "Clustering", "PCA", "Neural Networks", "Feature Engineering", "Hyperparameter Tuning", "Cross-Validation", "Precision/Recall/F1", "ROC-AUC", "Text Classification", "Basic NLP", "LLM Evaluation", "Human-AI Agreement", "Fairness Evaluation", "Anomaly Detection", "Time Series"],
       "portfolioColor": "bg-rose-50 text-rose-700 border-rose-200",
       "cvOrder": { "industry": 2, "research": 2, "full": 2 }
+    },
+    {
+      "category": "Software & Development",
+      "items": ["React", "FastAPI", "pytest", "Git/GitHub"],
+      "portfolioColor": "bg-orange-50 text-orange-700 border-orange-200",
+      "cvOrder": { "industry": 3, "research": 5, "full": 5 }
     },
     {
       "category": "Data Analysis & Visualization",
       "items": ["Tableau", "Excel", "Google Sheets", "Alteryx"],
       "portfolioColor": "bg-green-50 text-green-700 border-green-200",
-      "cvOrder": { "industry": 3, "research": 4, "full": 3 }
+      "cvOrder": { "industry": 4, "research": 4, "full": 3 }
     },
     {
       "category": "Design & Prototyping",
       "items": ["Figma", "Figma Motion"],
       "portfolioColor": "bg-purple-50 text-purple-700 border-purple-200",
-      "cvOrder": { "industry": 4, "research": 5, "full": 5 }
+      "cvOrder": { "industry": 5, "research": 6, "full": 6 }
     },
     {
       "category": "Experimental & Research Tools",
       "items": ["jsPsych", "PsychoPy", "JavaScript", "HTML", "CSS", "Qualtrics", "SurveyMonkey"],
       "portfolioColor": "bg-yellow-50 text-yellow-800 border-yellow-300",
-      "cvOrder": { "industry": 5, "research": 3, "full": 4 }
+      "cvOrder": { "industry": 6, "research": 3, "full": 4 }
     },
     {
       "category": "Collaboration & Productivity",
       "items": ["Slack", "Teams", "Zoom", "Word", "Outlook", "Adobe PowerPoint", "OneDrive", "Dropbox"],
       "portfolioItems": ["Slack", "Teams", "Zoom", "Word", "PowerPoint", "OneDrive", "Dropbox"],
       "portfolioColor": "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600",
-      "cvOrder": { "industry": 6, "research": 6, "full": 6 }
+      "cvOrder": { "industry": 7, "research": 7, "full": 7 }
     }
   ],
   "projects": [
     {
-      "id": "fairness-llm-bias",
+      "id": "carryover",
       "portfolioOrder": 1,
-      "title": "Fairness in ML: Detecting Bias in LLM Answers (CSE 575, in progress)",
-      "methods": ["Text classification", "Bias evaluation"],
+      "featured": true,
+      "strengths": ["user-research", "apps-tools", "data-modeling"],
+      "caseStudy": "/projects/carryover",
+      "title": "Carryover: AI-Supported Daily Living App for Autistic Adults",
+      "stack": ["Python", "React", "FastAPI", "pytest"],
+      "methods": ["User research", "Task analysis", "Literature review", "Rule-based prompt fading"],
       "bullets": [
-        "Building a classifier that flags biased answers from an LLM, using the BBQ bias benchmark dataset.",
-        "Testing whether the classifier can pick the least biased answer out of several options the LLM gives."
+        "Led user research with partner First Place AZ (a site visit and 2 staff meetings), and turned the findings into design changes, including always-visible safety cautions and adaptive help per step.",
+        "Wrote a literature review on prompt fading and executive function, and wrote the fading rules (when help fades or comes back, per step and per person) that the app follows.",
+        "Built a Python module that detects where users get stuck (4 patterns) from interaction logs, requiring patterns to repeat before acting, to avoid false alarms.",
+        "Wrote 4 task analyses and 10 skill cards grounded in research and USDA/FDA safety guidance, and built the Demo page's “Why this changed” explanations and “Help over time” grid.",
+        "Co-built a working prototype with simulated data (React, FastAPI, an LLM with code-based safety rules, and automated tests) on a 5-person team, and presented it at the Scottsdale Launchpad."
       ],
-      "portfolioMeta": "In progress · Class Project",
+      "cvBullets": {
+        "industry": [
+          "Led user research with partner First Place AZ (a site visit and 2 staff meetings), and turned the findings into design changes, including always-visible safety cautions and adaptive help per step.",
+          "Built a Python module that detects where users get stuck (4 patterns) from interaction logs, requiring patterns to repeat before acting, to avoid false alarms.",
+          "Wrote 4 task analyses and 10 skill cards grounded in research and USDA/FDA safety guidance, and built the Demo page's “Why this changed” explanations and “Help over time” grid.",
+          "Co-built a working prototype with simulated data (React, FastAPI, an LLM with code-based safety rules, and automated tests) on a 5-person team, and presented it at the Scottsdale Launchpad."
+        ],
+        "research": [
+          "Led user research with partner First Place AZ (a site visit and 2 staff meetings), and turned the findings into design changes, including always-visible safety cautions and adaptive help per step.",
+          "Wrote a literature review on prompt fading and executive function, and wrote the fading rules (when help fades or comes back, per step and per person) that the app follows.",
+          "Built a Python module that detects where users get stuck (4 patterns) from interaction logs, requiring patterns to repeat before acting, to avoid false alarms.",
+          "Co-built a working prototype with simulated data (React, FastAPI, an LLM with code-based safety rules, and automated tests) on a 5-person team, and presented it at the Scottsdale Launchpad."
+        ],
+        "full": [
+          "Led user research with partner First Place AZ (a site visit and 2 staff meetings), and turned the findings into design changes, including always-visible safety cautions and adaptive help per step.",
+          "Wrote a literature review on prompt fading and executive function, and wrote the fading rules (when help fades or comes back, per step and per person) that the app follows.",
+          "Built a Python module that detects where users get stuck (4 patterns) from interaction logs, requiring patterns to repeat before acting, to avoid false alarms.",
+          "Co-built a working prototype with simulated data (React, FastAPI, an LLM with code-based safety rules, and automated tests) on a 5-person team, and presented it at the Scottsdale Launchpad."
+        ]
+      },
+      "resumeLink": { "label": "GitHub", "href": "https://github.com/TeamHavenASU/Carryover" },
+      "portfolioMeta": "ASU North American AI Challenge · Oct – Nov 2026 · Team Haven (5 people)",
+      "portfolioCategory": "cognitive",
+      "portfolioTags": ["User Research", "Accessibility", "Python", "React", "FastAPI", "LLM Safety"],
+      "links": [
+        { "label": "GitHub", "href": "https://github.com/TeamHavenASU/Carryover" },
+        { "label": "Demo video", "href": "https://drive.google.com/file/d/1Sm9PGo85Vt9gKehCgRP6guK9nb9IDeWC/view" }
+      ],
+      "cvOrder": { "industry": 1, "research": 2, "full": 1 }
+    },
+    {
+      "id": "fairness-llm-bias",
+      "portfolioOrder": 2,
+      "featured": true,
+      "strengths": ["data-modeling"],
+      "title": "Detecting and Correcting Social Bias in AI Question Answering (CSE 575, in progress)",
+      "methods": ["Text classification", "Bias evaluation", "Data preprocessing"],
+      "bullets": [
+        "Team project building a pipeline that detects biased answers from LLMs on the BBQ bias benchmark and rewrites them, while keeping accuracy on questions the context can answer.",
+        "Responsible for the data side: auditing and preprocessing BBQ, a loader that converts it into a general (text, label) format, and template-grouped train/validation/test splits so near-duplicate questions don't leak into the test set."
+      ],
+      "portfolioMeta": "In progress · Class project · 6-person team",
       "portfolioInst": "Arizona State University",
       "portfolioCategory": "ai",
-      "portfolioTags": ["Fairness in ML", "LLM Bias", "BBQ Benchmark", "Text Classification"],
+      "portfolioTags": ["Fairness in ML", "LLM Bias", "BBQ Benchmark", "Data Preprocessing"],
       "links": [],
-      "cvOrder": { "industry": 3, "research": 6, "full": 4 }
+      "cvOrder": { "industry": 4, "research": 3, "full": 5 }
     },
     {
       "id": "batadal-anomaly-detection",
-      "portfolioOrder": 2,
+      "portfolioOrder": 5,
+      "strengths": ["data-modeling"],
       "title": "Cyber Attack Detection in Water System Sensor Data (CSE 575, in progress)",
-      "methods": ["Anomaly detection", "Time series"],
+      "methods": ["Anomaly detection", "Time series", "Feature engineering", "Ridge regression"],
       "bullets": [
         "Group project using the BATADAL water distribution system dataset to detect cyber attacks from sensor readings.",
-        "Helping with the project proposal, report, and presentation."
+        "Did data cleaning and auditing, feature engineering, a Ridge regression baseline, and handling of partly labeled data."
       ],
       "portfolioMeta": "In progress · Class Project",
       "portfolioInst": "Arizona State University",
       "portfolioCategory": "ai",
-      "portfolioTags": ["Anomaly Detection", "Time Series", "Cybersecurity", "Water Systems"],
+      "portfolioTags": ["Anomaly Detection", "Time Series", "Ridge Regression", "Cybersecurity"],
       "links": [],
-      "cvOrder": { "industry": 5, "full": 9 }
+      "cvOrder": { "industry": 6, "full": 10 }
     },
     {
       "id": "trust-in-advice",
-      "portfolioOrder": 7,
+      "portfolioOrder": 4,
+      "featured": true,
+      "strengths": ["data-modeling", "experiments"],
       "title": "Trust in Advice: AI vs. Human Sources (Data Analysis & Written Report)",
       "stack": ["SAS (PROC GLMSELECT, PROC GLM)"],
       "methods": ["General linear model", "Stepwise selection (AIC)", "Residual diagnostics"],
@@ -170,11 +232,13 @@
       "links": [
         { "label": "View Report", "href": "/HimaShanthi-Portfolio/projects/trust-in-advice-report.pdf" }
       ],
-      "cvOrder": { "industry": 2, "research": 1, "full": 1 }
+      "cvOrder": { "industry": 3, "research": 1, "full": 2 }
     },
     {
       "id": "stack-overflow-ai",
       "portfolioOrder": 3,
+      "featured": true,
+      "strengths": ["data-modeling"],
       "title": "Analyzing the Impact of AI on Stack Overflow Participation (NLP & Data Analysis)",
       "stack": ["Python (pandas, NumPy, statsmodels, SciPy, Matplotlib, Seaborn)", "SQL", "Jupyter"],
       "methods": ["Time-series analysis", "NLP"],
@@ -191,11 +255,12 @@
       "links": [
         { "label": "View on GitHub", "href": "https://github.com/hima0921/stack-overflow-ai-project" }
       ],
-      "cvOrder": { "industry": 1, "research": 3, "full": 2 }
+      "cvOrder": { "industry": 2, "research": 5, "full": 3 }
     },
     {
       "id": "baseball-analysis",
-      "portfolioOrder": 11,
+      "portfolioOrder": 12,
+      "strengths": ["data-modeling"],
       "title": "Predictive Analysis of Team Performance in Baseball using SAS",
       "stack": ["SAS"],
       "methods": ["Multiple regression", "EDA", "Correlation analysis"],
@@ -220,11 +285,12 @@
       "links": [
         { "label": "View Report", "href": "/HimaShanthi-Portfolio/projects/baseball-performance-analysis.pdf" }
       ],
-      "cvOrder": { "industry": 4, "full": 7 }
+      "cvOrder": { "industry": 5, "full": 8 }
     },
     {
       "id": "adp-stock",
-      "portfolioOrder": 12,
+      "portfolioOrder": 13,
+      "strengths": ["data-modeling"],
       "title": "Predicting Daily Stock Prices of ADP using SAS",
       "stack": ["SAS"],
       "methods": ["Multiple regression", "Stepwise selection", "EDA"],
@@ -249,11 +315,12 @@
       "links": [
         { "label": "View Report", "href": "/HimaShanthi-Portfolio/projects/adp-stock-prediction.pdf" }
       ],
-      "cvOrder": { "full": 8 }
+      "cvOrder": { "full": 9 }
     },
     {
       "id": "stochastic-learning-model",
-      "portfolioOrder": 4,
+      "portfolioOrder": 8,
+      "strengths": ["data-modeling", "apps-tools"],
       "title": "Stochastic Dual-Timescale Model of Learning (ODE & SDE Modeling)",
       "stack": ["MATLAB", "R Shiny"],
       "methods": ["ODE/SDE modeling", "Stability analysis", "Simulation"],
@@ -270,11 +337,12 @@
       "links": [
         { "label": "View on GitHub", "href": "https://github.com/hima0921/stochastic-dual-timescale-learning-model" }
       ],
-      "cvOrder": { "research": 4, "full": 5 }
+      "cvOrder": { "research": 6, "full": 6 }
     },
     {
       "id": "cultural-trust",
-      "portfolioOrder": 5,
+      "portfolioOrder": 6,
+      "strengths": ["experiments"],
       "title": "Cultural Differences in Trust: AI vs. Human Expert Decision-Making",
       "methods": ["Mixed-effects modeling", "Experimental design", "Pre-registration"],
       "bullets": [
@@ -291,11 +359,12 @@
         { "label": "View Presentation", "href": "/HimaShanthi-Portfolio/projects/cultural-trust-presentation.html" },
         { "label": "View Pre-Registration", "href": "/HimaShanthi-Portfolio/projects/cultural-trust-preregistration.pdf" }
       ],
-      "cvOrder": { "research": 2, "full": 3 }
+      "cvOrder": { "research": 4, "full": 4 }
     },
     {
       "id": "reward-learning",
-      "portfolioOrder": 6,
+      "portfolioOrder": 7,
+      "strengths": ["experiments", "apps-tools"],
       "title": "Probabilistic Reward Learning Task using PsychoPy",
       "stack": ["PsychoPy", "Python (pandas, NumPy)"],
       "methods": ["Experimental design", "Learning under uncertainty"],
@@ -312,11 +381,12 @@
         { "label": "View Presentation", "href": "/HimaShanthi-Portfolio/projects/reward-learning-presentation.pdf" },
         { "label": "Download Task File", "href": "/HimaShanthi-Portfolio/projects/reward-learning-task.psyexp" }
       ],
-      "cvOrder": { "research": 5, "full": 6 }
+      "cvOrder": { "research": 7, "full": 7 }
     },
     {
       "id": "mirror-neurons",
-      "portfolioOrder": 8,
+      "portfolioOrder": 9,
+      "strengths": ["experiments"],
       "title": "Research Proposal: Mirror Neurons, Social Synchrony, and Collaborative Learning",
       "bullets": [
         "Proposed a research framework synthesizing human and animal literature on mirror neuron systems and social synchrony.",
@@ -329,11 +399,12 @@
       "links": [
         { "label": "View Proposal", "href": "/HimaShanthi-Portfolio/projects/mirror-neurons-proposal.pdf" }
       ],
-      "cvOrder": { "research": 7, "full": 10 }
+      "cvOrder": { "research": 8, "full": 11 }
     },
     {
       "id": "ancova-presentation",
-      "portfolioOrder": 9,
+      "portfolioOrder": 10,
+      "strengths": ["data-modeling"],
       "title": "ANCOVA Presentation",
       "onPortfolioOnly": true,
       "bullets": [
@@ -351,7 +422,8 @@
     },
     {
       "id": "sleep-caffeine-study",
-      "portfolioOrder": 10,
+      "portfolioOrder": 11,
+      "strengths": ["experiments", "data-modeling"],
       "title": "The Relationship Between University Students' Sleep and Caffeine Intake (Correlational Study)",
       "onPortfolioOnly": true,
       "bullets": [
@@ -379,7 +451,7 @@
       "end": "Present",
       "bullets": [
         "Attend lab meetings and discuss ongoing research on human-AI interaction.",
-        "Developing my own research project on AI and human trust and learning (in progress)."
+        "Building a multimodal AI tutor where students choose how they learn (visual, text, or speech), to use in a study comparing it with a standard AI tutoring chatbot (in progress)."
       ],
       "cvOrder": { "industry": 4, "research": 1, "full": 1 }
     },
@@ -388,11 +460,9 @@
       "lab": "NEXT Lab",
       "org": "ASU",
       "start": "08/2026",
-      "end": "Present",
+      "end": "10/2026",
       "bullets": [
-        "Test games, digital twins, and interactive apps with users to find usability problems and collect feedback.",
-        "Find and document bugs and performance issues and share them with developers.",
-        "Work with developers on UI and accessibility improvements."
+        "Tested games, digital twins, and interactive apps with users to find usability problems and collect feedback."
       ],
       "cvOrder": { "industry": 1, "research": 5, "full": 2 }
     },
@@ -401,11 +471,11 @@
       "lab": "Thinking Across Languages and Contexts Lab",
       "org": "ASU",
       "start": "08/2025",
-      "end": "Present",
+      "end": "10/2026",
       "bullets": [
-        "Assist a graduate student with testing experiments built in jsPsych and JavaScript.",
-        "Help check whether data are recorded correctly and organized for analysis.",
-        "Perform exploratory data analysis and assist in interpreting experimental results under supervision."
+        "Assisted a graduate student with testing experiments built in jsPsych and JavaScript.",
+        "Helped check whether data were recorded correctly and organized for analysis.",
+        "Performed exploratory data analysis and assisted in interpreting experimental results under supervision."
       ],
       "cvOrder": { "industry": 3, "research": 2, "full": 3 }
     },
@@ -414,12 +484,12 @@
       "lab": "Perception, Action, Language & Meaning Lab",
       "org": "ASU",
       "start": "08/2025",
-      "end": "Present",
+      "end": "05/2026",
       "bullets": [
-        "Run two-person collaborative task sessions (e.g., Taboo), observing and recording coordination, communication, and performance data using VR, motion-capture, and eye-tracking.",
-        "Work with the lab's time-series behavioral data, learning how to clean, organize, and explore it.",
-        "Read papers and explore possible methods (e.g., multilevel vector autoregression) to understand which approaches might fit the lab's data.",
-        "Contribute to discussions by sharing preliminary notes and observations from trial analyses."
+        "Ran two-person collaborative task sessions (e.g., Taboo), observing and recording coordination, communication, and performance data using VR, motion-capture, and eye-tracking.",
+        "Worked with the lab's time-series behavioral data, learning how to clean, organize, and explore it.",
+        "Read papers and explored possible methods (e.g., multilevel vector autoregression) to understand which approaches might fit the lab's data.",
+        "Contributed to discussions by sharing preliminary notes and observations from trial analyses."
       ],
       "cvOrder": { "industry": 2, "research": 3, "full": 4 }
     },
@@ -455,9 +525,9 @@
       "start": "10/2026",
       "end": "Present",
       "bullets": [
-        "Grade assignments and exams and give feedback to students.",
-        "Hold office hours and answer student questions about course content.",
-        "Work under the direction of a faculty supervisor."
+        "One of two course assistants for PSY 330 – Statistical Methods.",
+        "Grade assignments and exams with written feedback, following the instructor's grading guidelines.",
+        "Answer student emails about course content and SPSS."
       ],
       "cvOrder": { "industry": 2, "research": 1, "full": 1 }
     },
@@ -488,18 +558,18 @@
       "org": "ASU",
       "location": "Tempe, AZ",
       "start": "05/2023",
-      "end": "Present",
+      "end": "08/2026",
       "bullets": [
-        "Conduct phone-based survey interviews with currently employed and recently graduated ASU students, ensuring accurate and comprehensive data collection by clarifying responses and addressing any ambiguities.",
-        "Assist in the hiring process, including interviewing and evaluating candidates.",
-        "Perform data cleaning and ensure the integrity of datasets for analysis.",
-        "Train new student workers in survey procedures and oversee testing and calibration of survey tools."
+        "Conducted phone-based survey interviews with currently employed and recently graduated ASU students, ensuring accurate and complete data collection by clarifying responses and addressing any ambiguities.",
+        "Assisted in the hiring process, including interviewing and evaluating candidates.",
+        "Performed data cleaning and ensured the integrity of datasets for analysis.",
+        "Trained new student workers in survey procedures and oversaw testing and calibration of survey tools."
       ],
       "portfolioBullets": [
-        "Conduct phone-based survey interviews with employed and recently graduated ASU students",
-        "Assist in the hiring process, including interviewing and evaluating candidates",
-        "Perform data cleaning and ensure the integrity of datasets for analysis",
-        "Train new student workers in survey procedures and oversee tool calibration"
+        "Conducted phone-based survey interviews with employed and recently graduated ASU students",
+        "Assisted in the hiring process, including interviewing and evaluating candidates",
+        "Performed data cleaning and ensured the integrity of datasets for analysis",
+        "Trained new student workers in survey procedures and oversaw tool calibration"
       ],
       "cvOrder": { "industry": 3, "research": 3, "full": 3 }
     },

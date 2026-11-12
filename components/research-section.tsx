@@ -6,6 +6,7 @@ export function ResearchSection() {
     period: `${r.start} – ${r.end}`,
     inst: r.lab,
     bullets: r.bullets,
+    current: r.end === "Present",
   }))
 
   return (
@@ -24,9 +25,16 @@ export function ResearchSection() {
               <div className="p-6 flex-1">
                 <div className="flex flex-wrap justify-between items-start gap-2 mb-1">
                   <h4 className="text-xl font-bold text-black dark:text-white">{item.title}</h4>
-                  <span className="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">
-                    {item.period}
-                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {item.current && (
+                      <span className="text-xs font-bold uppercase tracking-wide bg-yellow-400 text-black border border-black px-3 py-1 rounded-full">
+                        Current
+                      </span>
+                    )}
+                    <span className="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">
+                      {item.period}
+                    </span>
+                  </div>
                 </div>
                 <p className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-3">ASU · {item.inst}</p>
                 <ul className="list-disc ml-4 text-gray-700 dark:text-gray-300 leading-relaxed space-y-1 text-base">

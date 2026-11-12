@@ -99,7 +99,8 @@ function buildProjects(cv) {
     return (
       `\\begin{twocolentry}{\n    ${link}\n}\n    \\textbf{${esc(p.title)}}\n\\end{twocolentry}\n\n` +
       stackLine +
-      `${stackLine ? "" : "\\vspace{0.10 cm}\n"}${highlights(p.bullets)}`
+      // A project can give a different bullet list per CV with "cvBullets".
+      `${stackLine ? "" : "\\vspace{0.10 cm}\n"}${highlights((p.cvBullets && p.cvBullets[cv]) || p.bullets)}`
     );
   });
 

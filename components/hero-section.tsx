@@ -1,5 +1,24 @@
+"use client"
+
+import { CvMenu } from "@/components/cv-menu"
+import { PROJECT_FILTER_EVENT, type ProjectFilter } from "@/components/projects-section"
+
+// "What I can do" cards. Each one opens Projects on the matching tab.
+const strengths: { label: string; proof: string; filter: ProjectFilter }[] = [
+  { label: "User research", proof: "Carryover", filter: "user-research" },
+  { label: "Data & modeling", proof: "Stack Overflow, BATADAL", filter: "data-modeling" },
+  { label: "Experiments", proof: "Trust studies, PsychoPy task", filter: "experiments" },
+  { label: "Apps & tools", proof: "Carryover, R Shiny app", filter: "apps-tools" },
+]
+
+function openProjects(filter: ProjectFilter) {
+  window.dispatchEvent(new CustomEvent(PROJECT_FILTER_EVENT, { detail: filter }))
+}
+
 export function HeroSection() {
   const badges = ["Summa Cum Laude", "4.0 GPA", "ASU MS DSAE-HCA"]
+  const outlineBtn =
+    "inline-flex items-center gap-1.5 bg-white dark:bg-gray-950 text-black dark:text-white font-bold px-6 py-3 uppercase text-sm border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-950 pt-8 pb-8">
@@ -10,27 +29,50 @@ export function HeroSection() {
             <div>
               <h1 className="text-5xl md:text-6xl font-black mb-4 tracking-tight text-black dark:text-white">HIMA SHANTHI RAYAPATI</h1>
               <div className="h-1.5 w-32 bg-yellow-400 mb-6"></div>
-              <p className="text-lg font-semibold">Cognitive Science · Statistics · Human-AI Interaction</p>
+              <p className="text-lg font-semibold">Human-AI Interaction · Psychology · Statistics</p>
             </div>
 
             <p className="text-xl leading-relaxed italic text-gray-700 dark:text-gray-300">
               "Finding certainty in numbers, wonder in people, and stories in everything."
             </p>
 
-            <ul className="text-base leading-relaxed text-gray-700 dark:text-gray-300 max-w-sm space-y-2">
-              <li className="flex gap-2">
-                <span className="text-yellow-500 font-black">▸</span>
-                <span>Incoming MS student in Data Science, Analytics and Engineering (Human-centered Applications), Arizona State University</span>
-              </li>
-              <li className="flex gap-2">
-                <span className="text-yellow-500 font-black">▸</span>
-                <span>Dual BS degrees in Mathematics (Statistics) and Psychology, Philosophy minor</span>
-              </li>
-              <li className="flex gap-2">
-                <span className="text-yellow-500 font-black">▸</span>
-                <span>Focused on research, quantitative methods, and human-AI interaction</span>
-              </li>
-            </ul>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="#contact"
+                className="inline-block bg-yellow-400 text-black font-bold px-6 sm:px-8 py-3 uppercase text-sm hover:bg-yellow-300 transition-colors border-2 border-black"
+              >
+                Get In Touch
+              </a>
+              <a href="#projects" onClick={() => openProjects("all")} className={outlineBtn}>
+                View Projects
+              </a>
+              <CvMenu buttonClassName={outlineBtn} />
+            </div>
+
+            {/* What I can do: 2x2 grid of small cards */}
+            <div className="grid grid-cols-2 gap-3 max-w-lg">
+              {strengths.map((s) => (
+                <a
+                  key={s.filter}
+                  href="#projects"
+                  onClick={() => openProjects(s.filter)}
+                  className="group flex flex-col justify-between gap-2 rounded-xl border-2 border-black dark:border-gray-600 bg-white dark:bg-gray-900 p-3 sm:p-4 transition-all duration-200 hover:-translate-y-0.5 hover:bg-yellow-400 hover:border-black"
+                >
+                  <span className="flex items-start justify-between gap-2">
+                    <span className="text-sm font-black uppercase tracking-wide text-black dark:text-white group-hover:text-black">
+                      {s.label}
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className="text-yellow-500 font-black group-hover:text-black transition-transform group-hover:translate-x-0.5"
+                    >
+                      →
+                    </span>
+                  </span>
+                  <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 group-hover:text-black/80">{s.proof}</span>
+                </a>
+              ))}
+            </div>
 
             <div className="flex flex-wrap gap-2">
               {badges.map((badge, i) => (
@@ -43,14 +85,6 @@ export function HeroSection() {
               ))}
             </div>
 
-            <div className="pt-2">
-              <a
-                href="#contact"
-                className="inline-block bg-yellow-400 text-black font-bold px-8 py-3 uppercase text-sm hover:bg-yellow-300 transition-colors border-2 border-black"
-              >
-                Get In Touch
-              </a>
-            </div>
           </div>
 
           {/* Right Image */}

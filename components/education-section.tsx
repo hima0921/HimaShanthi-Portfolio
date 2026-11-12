@@ -4,12 +4,15 @@ export function EducationSection() {
   const [msDegree, bsDegree] = resumeData.education
   const bsExtras = bsDegree.portfolioExtras
   const { scholarships, programs = [], coursework } = resumeData.portfolioExtras
-  const courseworkColumns: { label: string; color: string }[] = [
-    { label: "Statistics & Quantitative Methods", color: "text-blue-700" },
-    { label: "Cognitive Science & Psychology", color: "text-yellow-700" },
-    { label: "Computing & Data Science", color: "text-green-700" },
-    { label: "Philosophy", color: "text-rose-700" },
-  ]
+  // Heading colors for each coursework group. Groups not listed here use black.
+  const courseworkColors: Record<string, string> = {
+    "Graduate (Fall 2026)": "text-black dark:text-yellow-400",
+    "Statistics & Quantitative Methods": "text-blue-700",
+    "Cognitive Science & Psychology": "text-yellow-700",
+    "Computing & Data Science": "text-green-700",
+    Philosophy: "text-rose-700",
+  }
+  const courseworkGroups = Object.entries(coursework as Record<string, string[]>)
 
   return (
     <section id="education" className="py-20 bg-gray-50 dark:bg-gray-900 border-t-2 border-black dark:border-gray-700">
@@ -110,21 +113,29 @@ export function EducationSection() {
           {/* Coursework */}
           <div className="flex rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-black dark:hover:border-white">
             <div className="w-1.5 bg-black dark:bg-gray-400 flex-shrink-0"></div>
-            <div className="p-6 md:p-8 flex-1">
-            <h3 className="text-lg font-bold mb-6 text-black dark:text-white">Relevant Coursework</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              {courseworkColumns.map((col) => (
-                <div key={col.label}>
-                  <p className={`font-bold mb-2 text-sm uppercase tracking-wide ${col.color}`}>{col.label}</p>
-                  <ul className="text-base space-y-1 text-gray-700 dark:text-gray-300">
-                    {coursework[col.label as keyof typeof coursework].map((course, i) => (
-                      <li key={i}>• {course}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
+            <details className="group/cw p-6 md:p-8 flex-1">
+              <summary className="flex items-center justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                <h3 className="text-lg font-bold text-black dark:text-white">Relevant Coursework</h3>
+                <span className="text-xs font-bold uppercase tracking-wide bg-black text-yellow-400 px-3 py-1.5 rounded-full whitespace-nowrap">
+                  <span className="group-open/cw:hidden">Show ▾</span>
+                  <span className="hidden group-open/cw:inline">Hide ▴</span>
+                </span>
+              </summary>
+              <div className="grid md:grid-cols-2 gap-6 mt-6">
+                {courseworkGroups.map(([label, courses]) => (
+                  <div key={label}>
+                    <p className={`font-bold mb-2 text-sm uppercase tracking-wide ${courseworkColors[label] ?? "text-black dark:text-white"}`}>
+                      {label}
+                    </p>
+                    <ul className="text-base space-y-1 text-gray-700 dark:text-gray-300">
+                      {courses.map((course, i) => (
+                        <li key={i}>• {course}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </details>
           </div>
         </div>
       </div>

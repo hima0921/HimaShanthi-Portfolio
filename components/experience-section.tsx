@@ -6,6 +6,7 @@ export function ExperienceSection() {
     company: `${job.org}, ${job.location}`,
     period: `${job.start} - ${job.end}`,
     duties: job.portfolioBullets ?? job.bullets,
+    current: job.end === "Present",
   }))
 
   return (
@@ -27,9 +28,16 @@ export function ExperienceSection() {
                     <h3 className="text-xl font-bold">{job.title}</h3>
                     <p className="text-gray-600 dark:text-gray-400 text-sm">{job.company}</p>
                   </div>
-                  <span className="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">
-                    {job.period}
-                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {job.current && (
+                      <span className="text-xs font-bold uppercase tracking-wide bg-yellow-400 text-black border border-black px-3 py-1 rounded-full">
+                        Current
+                      </span>
+                    )}
+                    <span className="text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">
+                      {job.period}
+                    </span>
+                  </div>
                 </div>
                 <ul className="space-y-1.5 text-gray-700 dark:text-gray-300 text-base mt-3">
                   {job.duties.map((duty, i) => (

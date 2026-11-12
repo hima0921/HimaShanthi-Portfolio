@@ -11,7 +11,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Hima Shanthi Rayapati | Portfolio",
   description:
-    "Incoming MS student in Psychology (Cognition, Behavior, and Information) at ASU. Dual BS in Mathematics (Statistics) and Psychology. Research, quantitative methods, and human-AI interaction.",
+    "MS student in Data Science, Analytics and Engineering (Human-Centered Applications) at ASU. Dual BS in Mathematics (Statistics) and Psychology. Research, quantitative methods, and human-AI interaction.",
   openGraph: {
     images: ["https://hima0921.github.io/HimaShanthi-Portfolio/portfolio_photo.png"],
   },

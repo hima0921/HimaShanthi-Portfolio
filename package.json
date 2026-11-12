@@ -2,7 +2,7 @@
   "name": "my-v0-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dineshsai05.github.io/HimaShanthi-Portfolio",
+  "homepage": "https://hima0921.github.io/HimaShanthi-Portfolio",
   "scripts": {
     "build": "next build",
     "dev": "next dev",

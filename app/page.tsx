@@ -9,6 +9,7 @@ import { EssaysSection } from "@/components/essays-section"
 import { SkillsSection } from "@/components/skills-section"
 import { ContactSection } from "@/components/contact-section"
 import { ScrollToTop } from "@/components/scroll-to-top"
+import { SiteFooter } from "@/components/site-footer"
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         <ContactSection />
         <ScrollToTop />
       </main>
+      <SiteFooter />
     </div>
   )
 }
