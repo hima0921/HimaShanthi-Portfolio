@@ -327,20 +327,25 @@
       "id": "stochastic-learning-model",
       "portfolioOrder": 8,
       "strengths": ["data-modeling", "apps-tools"],
-      "title": "Stochastic Dual-Timescale Model of Learning (ODE & SDE Modeling)",
-      "stack": ["MATLAB", "R Shiny"],
-      "methods": ["ODE/SDE modeling", "Stability analysis", "Simulation"],
+      "title": "Dual-Timescale Model of Learning (ODE & SDE)",
+      "stack": ["MATLAB", "R (Shiny, deSolve, ggplot2)"],
+      "methods": ["ODE/SDE modeling", "Stability analysis", "Euler-Maruyama simulation"],
       "bullets": [
-        "Developed differential equation model of fast and slow learning processes.",
-        "Extended to stochastic framework to examine effects of noise.",
-        "Verified theoretical properties via simulation.",
-        "Linked model behavior to memory retention and learning variability."
+        "Part 1 (solo): built a model of fast and slow learning, analyzed its stability, and simulated it in MATLAB.",
+        "Part 2 (with a partner): did the theory for a stochastic version of the model (SDEs, Euler-Maruyama).",
+        "Built R Shiny apps to explore the model, including a 3-tab app for Part 2 that is live online."
       ],
-      "resumeLink": { "label": "Final Project / 2025", "href": "https://github.com/hima0921/stochastic-dual-timescale-learning-model" },
-      "portfolioMeta": "Final Project · 2025",
+      "portfolioBullets": [
+        "Part 1 (solo class project): built a continuous-time model of fast and slow learning, analyzed its stability, and ran simulations in MATLAB.",
+        "Part 2 (class project with a partner): did the theory for a stochastic version of the model (SDEs, Euler-Maruyama), including how the spread of results grows with the noise level.",
+        "Built R Shiny apps to explore the model: a small app for Part 1, and a 3-tab app for Part 2 that is live online. My partner did the neural network experiment in Part 2."
+      ],
+      "resumeLink": { "label": "Live App", "href": "https://hima03.shinyapps.io/app2/" },
+      "portfolioMeta": "Two class projects · 2026",
       "portfolioCategory": "cognitive",
       "portfolioTags": ["MATLAB", "R Shiny", "ODE/SDE Modeling", "Cognitive Modeling", "Simulation"],
       "links": [
+        { "label": "Live app", "href": "https://hima03.shinyapps.io/app2/" },
         { "label": "View on GitHub", "href": "https://github.com/hima0921/stochastic-dual-timescale-learning-model" }
       ],
       "cvOrder": { "research": 6, "full": 6 }

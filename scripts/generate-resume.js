@@ -78,7 +78,10 @@ function byRecency(items) {
 // the section heading already stays with the first entry (titlesec adds no
 // break after a heading).
 function keepTogether(body) {
-  return "\\begin{keeptogether}\n" + body + "\n\\end{keeptogether}";
+  // LaTeX can still break a page at a \vspace, so put \nopagebreak in front of
+  // every \vspace inside the entry (e.g. between the title and the bullets).
+  const glued = body.split("\\vspace{").join("\\nopagebreak\\vspace{");
+  return "\\begin{keeptogether}\n" + glued + "\n\\end{keeptogether}";
 }
 function sectionWithEntries(name, blocks, gap) {
   return "\\section{" + name + "}\n\n" + blocks.map(keepTogether).join("\n\n\\vspace{" + gap + "}\n\n");
@@ -88,9 +91,9 @@ function sectionWithEntries(name, blocks, gap) {
 
 function buildEducation() {
   const parts = data.education.map((e, i) => {
-    let block = `\\begin{twocolentry}{\n    ${esc(e.start)} -- ${esc(e.end)}\n}\n    \\textbf{${esc(
+    let block = `\\begin{entrytitle}{\n    ${esc(e.start)} -- ${esc(e.end)}\n}\n    \\textbf{${esc(
       e.school
-    )}}, ${esc(e.degree)}\n\\end{twocolentry}`;
+    )}}, ${esc(e.degree)}\n\\end{entrytitle}`;
     if (e.notes && e.notes.length) {
       const noteLine = e.notes
         .map((n) => {
@@ -131,7 +134,7 @@ function buildProjects(cv) {
       ? `\\vspace{0.03 cm}\n\\begin{onecolentry}\n    \\footnotesize ${parts.join(" \\enspace$\\cdot$\\enspace ")}\n\\end{onecolentry}\n`
       : "";
     return (
-      `\\begin{twocolentry}{\n    ${link}\n}\n    \\textbf{${esc(p.title)}}\n\\end{twocolentry}\n\n` +
+      `\\begin{entrytitle}{\n    ${link}\n}\n    \\textbf{${esc(p.title)}}\n\\end{entrytitle}\n\n` +
       stackLine +
       `${stackLine ? "" : "\\vspace{0.10 cm}\n"}${highlights(bullets)}`
     );
@@ -145,8 +148,8 @@ function buildProjects(cv) {
 function buildResearchExperience(cv) {
   const blocks = byRecency(forCv(data.researchExperience, cv)).map((r) => {
     return (
-      `\\begin{twocolentry}{\n        ${esc(r.start)} -- ${esc(r.end)}\n    }\n` +
-      `    \\textbf{${esc(r.role)}}, \\textit{${esc(r.lab)}}, ${esc(r.org)}\n\\end{twocolentry}\n\n` +
+      `\\begin{entrytitle}{\n        ${esc(r.start)} -- ${esc(r.end)}\n    }\n` +
+      `    \\textbf{${esc(r.role)}}, \\textit{${esc(r.lab)}}, ${esc(r.org)}\n\\end{entrytitle}\n\n` +
       `\\vspace{0.10 cm}\n${highlights(bulletsFor(r, cv))}`
     );
   });
@@ -156,8 +159,8 @@ function buildResearchExperience(cv) {
 function buildWorkExperience(cv) {
   const blocks = byRecency(forCv(data.workExperience, cv)).map((w) => {
     return (
-      `\\begin{twocolentry}{\n        ${esc(w.start)} -- ${esc(w.end)}\n    }\n` +
-      `    \\textbf{${esc(w.title)}}, ${esc(w.org)} -- ${esc(w.location)}\n\\end{twocolentry}\n\n` +
+      `\\begin{entrytitle}{\n        ${esc(w.start)} -- ${esc(w.end)}\n    }\n` +
+      `    \\textbf{${esc(w.title)}}, ${esc(w.org)} -- ${esc(w.location)}\n\\end{entrytitle}\n\n` +
       `\\vspace{0.10 cm}\n${highlights(bulletsFor(w, cv))}`
     );
   });

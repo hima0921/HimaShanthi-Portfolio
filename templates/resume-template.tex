@@ -2,8 +2,8 @@
 
 \usepackage[
     ignoreheadfoot,
-    top=2 cm,
-    bottom=2 cm,
+    top=1.5 cm,
+    bottom=1.5 cm,
     left=2 cm,
     right=2 cm,
     footskip=1.0 cm,
@@ -51,7 +51,10 @@
 \setlength{\columnsep}{0.15cm}
 \pagenumbering{gobble}
 
-\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+% No \needspace here: entries are kept together (see keeptogether below) and a
+% heading always stays with what follows it. A \needspace would make the break
+% before a heading look "cheap" to LaTeX and leave big gaps at page bottoms.
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
 
 \titlespacing{\section}{-1pt}{0.25 cm}{0.15 cm}
 
@@ -86,6 +89,19 @@
     \end{adjustwidth}
 }
 
+% Title row of an entry: title on the left, date or link on the right.
+% Same layout as twocolentry, but built as a table instead of with paracol:
+% paracol forces its own page breaks, which could split a title from its
+% bullets. A table row is never split, so it stays with what follows.
+\newenvironment{entrytitle}[1]{%
+    \def\entrySecondColumn{#1}%
+    \par\noindent
+    \tabularx{\linewidth}{@{}>{\raggedright\arraybackslash}X@{\hspace{\columnsep}}>{\raggedleft\arraybackslash}p{4.5 cm}@{}}%
+}{%
+    & \entrySecondColumn
+    \endtabularx\par
+}
+
 % Keeps one whole entry (title, tools line, bullets) on the same page.
 % Inside it every page break is forbidden, so LaTeX can only break between
 % entries: if an entry doesn't fit, all of it moves to the next page.
@@ -96,6 +112,10 @@
     \@beginparpenalty=10000 \@itempenalty=10000 \@endparpenalty=10000
 }{
     \par
+    % Allow a page break again right after the entry. Use the same cost as the
+    % break before a section heading, so LaTeX fills the page instead of
+    % preferring to break early at a heading.
+    \penalty\@secpenalty
 }
 \makeatother
 
