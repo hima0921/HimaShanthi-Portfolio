@@ -2,7 +2,15 @@ import resumeData from "@/resume-data.json"
 
 export function SkillsSection() {
   const skillCategories = [...resumeData.skills]
-    .sort((a, b) => a.cvOrder.industry - b.cvOrder.industry)
+    // Groups with no cvOrder.industry (e.g. dropped from the Industry CV) go last.
+    .sort((a, b) => {
+      const ai = a.cvOrder.industry
+      const bi = b.cvOrder.industry
+      if (ai === undefined && bi === undefined) return 0
+      if (ai === undefined) return 1
+      if (bi === undefined) return -1
+      return ai - bi
+    })
     .map((cat) => ({
       category: cat.category,
       skills: cat.portfolioItems ?? cat.items,

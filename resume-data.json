@@ -127,7 +127,7 @@
       "items": ["Slack", "Teams", "Zoom", "Word", "Outlook", "Adobe PowerPoint", "OneDrive", "Dropbox"],
       "portfolioItems": ["Slack", "Teams", "Zoom", "Word", "PowerPoint", "OneDrive", "Dropbox"],
       "portfolioColor": "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600",
-      "cvOrder": { "industry": 7, "full": 7 }
+      "cvOrder": { "full": 7 }
     }
   ],
   "projects": [
@@ -149,9 +149,10 @@
       ],
       "cvBullets": {
         "industry": [
-          "Led user research with partner First Place AZ (a site visit and 2 staff meetings), and turned the findings into design changes, including always-visible safety cautions and adaptive help per step.",
-          "Built a Python module that detects where users get stuck (4 patterns) from interaction logs, requiring patterns to repeat before acting, to avoid false alarms.",
-          "Co-built a working prototype with simulated data (React, FastAPI, an LLM with code-based safety rules, and automated tests) on a 5-person team, and presented it at the Scottsdale Launchpad."
+          "Built a Python module that finds where users get stuck (4 patterns) from interaction logs, acting only when a pattern repeats to avoid false alarms.",
+          "Led user research with partner First Place AZ (a site visit and 2 staff meetings) and turned the findings into design changes, such as always-visible safety cautions and adaptive help at each step.",
+          "Wrote the rules for when the app's help fades or comes back, per step and per person, based on a literature review on prompt fading and executive function.",
+          "Co-built a working prototype on a 5-person team (React, FastAPI, an LLM with code-based safety rules, pytest) and presented it at the Scottsdale Launchpad."
         ],
         "research": [
           "Led user research with partner First Place AZ (a site visit and 2 staff meetings), and turned the findings into design changes, including always-visible safety cautions and adaptive help per step.",
@@ -192,7 +193,7 @@
       "portfolioCategory": "ai",
       "portfolioTags": ["Fairness in ML", "LLM Bias", "BBQ Benchmark", "Data Preprocessing"],
       "links": [],
-      "cvOrder": { "industry": 4, "research": 3, "full": 5 }
+      "cvOrder": { "industry": 3, "research": 3, "full": 5 }
     },
     {
       "id": "batadal-anomaly-detection",
@@ -209,7 +210,7 @@
       "portfolioCategory": "ai",
       "portfolioTags": ["Anomaly Detection", "Time Series", "Ridge Regression", "Cybersecurity"],
       "links": [],
-      "cvOrder": { "industry": 6, "full": 10 }
+      "cvOrder": { "industry": 5, "full": 10 }
     },
     {
       "id": "trust-in-advice",
@@ -224,6 +225,12 @@
         "Modeled decision changes before and after advice exposure.",
         "Found advice correctness as primary driver, with modest AI-related effects."
       ],
+      "cvBullets": {
+        "industry": [
+          "Found that advice correctness, not whether the advice came from an AI or a human, was the main driver of people's decisions, across 30,000+ human-AI interactions.",
+          "Modeled how people changed their decisions after seeing advice, using general linear models with stepwise selection in SAS."
+        ]
+      },
       "resumeLink": { "label": "Trust in AI.com/2025", "href": "https://hima0921.github.io/HimaShanthi-Portfolio/projects/trust-in-advice-report.pdf" },
       "portfolioMeta": "2025",
       "portfolioCategory": "ai",
@@ -231,7 +238,7 @@
       "links": [
         { "label": "View Report", "href": "/HimaShanthi-Portfolio/projects/trust-in-advice-report.pdf" }
       ],
-      "cvOrder": { "industry": 3, "research": 1, "full": 2 }
+      "cvOrder": { "industry": 2, "research": 1, "full": 2 }
     },
     {
       "id": "stack-overflow-ai",
@@ -261,7 +268,7 @@
           "Explored tag-based trends and basic NLP features to examine topic shifts."
         ]
       },
-      "cvOrder": { "industry": 2, "full": 3 }
+      "cvOrder": { "industry": 4, "full": 3 }
     },
     {
       "id": "baseball-analysis",
@@ -464,7 +471,12 @@
         "Attend lab meetings and discuss ongoing research on human-AI interaction.",
         "Building a multimodal AI tutor where students choose how they learn (visual, text, or speech), to use in a study comparing it with a standard AI tutoring chatbot (in progress)."
       ],
-      "cvOrder": { "industry": 4, "research": 1, "full": 1 }
+      "cvBullets": {
+        "industry": [
+          "Building a multimodal AI tutor where students choose how they learn (visual, text, or speech), to use in a study comparing it with a standard AI tutoring chatbot (in progress)."
+        ]
+      },
+      "cvOrder": { "industry": 1, "research": 1, "full": 1 }
     },
     {
       "role": "UX Researcher (UXR Guild)",
@@ -475,7 +487,7 @@
       "bullets": [
         "Tested games, digital twins, and interactive apps with users to find usability problems and collect feedback."
       ],
-      "cvOrder": { "industry": 1, "research": 5, "full": 2 }
+      "cvOrder": { "industry": 2, "research": 5, "full": 2 }
     },
     {
       "role": "Research Assistant",
@@ -488,7 +500,13 @@
         "Helped check whether data were recorded correctly and organized for analysis.",
         "Performed exploratory data analysis and assisted in interpreting experimental results under supervision."
       ],
-      "cvOrder": { "industry": 3, "research": 2, "full": 3 }
+      "cvBullets": {
+        "industry": [
+          "Tested experiments built in jsPsych and JavaScript, and checked that data were recorded correctly for analysis.",
+          "Ran exploratory data analysis on experimental results."
+        ]
+      },
+      "cvOrder": { "industry": 4, "research": 2, "full": 3 }
     },
     {
       "role": "Research Assistant",
@@ -502,7 +520,13 @@
         "Read papers and explored possible methods (e.g., multilevel vector autoregression) to understand which approaches might fit the lab's data.",
         "Contributed to discussions by sharing preliminary notes and observations from trial analyses."
       ],
-      "cvOrder": { "industry": 2, "research": 3, "full": 4 }
+      "cvBullets": {
+        "industry": [
+          "Ran two-person collaborative task sessions (e.g., Taboo), recording coordination, communication, and performance data with VR, motion capture, and eye tracking.",
+          "Cleaned, organized, and explored the lab's time-series behavioral data."
+        ]
+      },
+      "cvOrder": { "industry": 3, "research": 3, "full": 4 }
     },
     {
       "role": "Volunteer Research Assistant",
@@ -540,6 +564,11 @@
         "Grade assignments and exams with written feedback, following the instructor's grading guidelines.",
         "Answer student emails about course content and SPSS."
       ],
+      "cvBullets": {
+        "industry": [
+          "Grade assignments and exams with written feedback for PSY 330 (Statistical Methods), and answer student questions about course content and SPSS."
+        ]
+      },
       "cvOrder": { "industry": 2, "research": 1, "full": 1 }
     },
     {
@@ -562,6 +591,12 @@
         "Perform data cleaning tasks, identifying and correcting inconsistencies",
         "Work with databases to structure data and ensure accessibility for future use"
       ],
+      "cvBullets": {
+        "industry": [
+          "Check whether AI-generated tags follow the evaluation guidelines and are accurate.",
+          "Review, tag, and clean user-generated comments, and structure them in databases so they are easy to search and reuse."
+        ]
+      },
       "cvOrder": { "industry": 1, "research": 2, "full": 2 }
     },
     {
@@ -622,6 +657,8 @@
   ],
   "cvConfig": {
     "industry": {
+      "summary": "Data analytics MS student with a background in statistics and psychology, focused on how people use and trust AI. Experienced in analyzing behavioral data and building prototypes to test ideas.",
+      "roleOrder": "cvOrder",
       "sectionOrder": ["education", "skills", "projects", "researchExperience", "workExperience"]
     },
     "research": {

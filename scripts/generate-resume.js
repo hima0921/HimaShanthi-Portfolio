@@ -71,6 +71,12 @@ function byRecency(items) {
     (a, b) => monthKey(b.end) - monthKey(a.end) || monthKey(b.start) - monthKey(a.start)
   );
 }
+// A CV can set "roleOrder": "cvOrder" in cvConfig to order roles by cvOrder
+// instead of by date.
+function orderRoles(items, cv) {
+  const roles = forCv(items, cv);
+  return data.cvConfig[cv].roleOrder === "cvOrder" ? roles : byRecency(roles);
+}
 
 // --- Keeping entries together ----------------------------------------------
 // Each entry is wrapped in the template's "keeptogether" environment, which
@@ -146,7 +152,7 @@ function buildProjects(cv) {
 }
 
 function buildResearchExperience(cv) {
-  const blocks = byRecency(forCv(data.researchExperience, cv)).map((r) => {
+  const blocks = orderRoles(data.researchExperience, cv).map((r) => {
     return (
       `\\begin{entrytitle}{\n        ${esc(r.start)} -- ${esc(r.end)}\n    }\n` +
       `    \\textbf{${esc(r.role)}}, \\textit{${esc(r.lab)}}, ${esc(r.org)}\n\\end{entrytitle}\n\n` +
@@ -157,7 +163,7 @@ function buildResearchExperience(cv) {
 }
 
 function buildWorkExperience(cv) {
-  const blocks = byRecency(forCv(data.workExperience, cv)).map((w) => {
+  const blocks = orderRoles(data.workExperience, cv).map((w) => {
     return (
       `\\begin{entrytitle}{\n        ${esc(w.start)} -- ${esc(w.end)}\n    }\n` +
       `    \\textbf{${esc(w.title)}}, ${esc(w.org)} -- ${esc(w.location)}\n\\end{entrytitle}\n\n` +
@@ -177,9 +183,17 @@ const SECTION_BUILDERS = {
 
 // --- Build one CV version ---------------------------------------------------
 
+// Optional one-paragraph summary under the contact line ("summary" in cvConfig).
+function buildSummary(cv) {
+  const summary = data.cvConfig[cv].summary;
+  if (!summary) return "";
+  return `\\section{Summary}\n\n\\begin{onecolentry}\n    ${esc(summary)}\n\\end{onecolentry}\n\n`;
+}
+
 function buildCv(cv) {
   const order = data.cvConfig[cv].sectionOrder;
-  const content = order.map((section) => SECTION_BUILDERS[section](cv)).join("\n\n");
+  const content =
+    buildSummary(cv) + order.map((section) => SECTION_BUILDERS[section](cv)).join("\n\n");
 
   const contactLine = [
     `\\mbox{\\hrefWithoutArrow{mailto:${data.personal.email}}{${data.personal.email}}}`,
