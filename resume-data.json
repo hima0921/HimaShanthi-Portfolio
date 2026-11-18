@@ -231,7 +231,7 @@
           "Modeled how people changed their decisions after seeing advice, using general linear models with stepwise selection in SAS."
         ]
       },
-      "resumeLink": { "label": "Trust in AI.com/2025", "href": "https://hima0921.github.io/HimaShanthi-Portfolio/projects/trust-in-advice-report.pdf" },
+      "resumeLink": { "label": "Report", "href": "https://hima0921.github.io/HimaShanthi-Portfolio/projects/trust-in-advice-report.pdf" },
       "portfolioMeta": "2025",
       "portfolioCategory": "ai",
       "portfolioTags": ["Human-AI Interaction", "SAS", "General Linear Model", "Stepwise Selection", "Data Analysis"],
@@ -619,8 +619,7 @@
       ],
       "cvBullets": {
         "industry": [
-          "Conducted phone-based survey interviews with currently employed and recently graduated ASU students, ensuring accurate and complete data collection by clarifying responses and addressing any ambiguities.",
-          "Trained new student workers in survey procedures and oversaw testing and calibration of survey tools."
+          "Ran phone survey interviews with ASU graduates and trained new student workers on survey procedures."
         ]
       },
       "cvOrder": { "industry": 3, "full": 3 }
@@ -657,7 +656,7 @@
   ],
   "cvConfig": {
     "industry": {
-      "summary": "Data analytics MS student with a background in statistics and psychology, focused on how people use and trust AI. Experienced in analyzing behavioral data and building prototypes to test ideas.",
+      "summary": "Data analytics MS student with a background in statistics and psychology, focused on how people use and trust AI. Experienced in analyzing behavioral data and building prototypes to test ideas. Skilled in Python, R, SQL, statistical modeling and machine learning, with research experience across several ASU labs studying human behavior and human-AI interaction.",
       "roleOrder": "cvOrder",
       "sectionOrder": ["education", "skills", "projects", "researchExperience", "workExperience"]
     },
